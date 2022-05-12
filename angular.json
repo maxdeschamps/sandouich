@@ -8,6 +8,14 @@
       "root": "projects/sandouich",
       "sourceRoot": "projects/sandouich/src",
       "prefix": "sand",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
