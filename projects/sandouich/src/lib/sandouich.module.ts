@@ -13,7 +13,8 @@ const COMPONENTS = [SandouichComponent];
   imports: [
   ],
   exports: [
-    SandouichComponent
+    SandouichComponent,
+    CardComponent
   ]
 })
 export class SandouichModule { }
