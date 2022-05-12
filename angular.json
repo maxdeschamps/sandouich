@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/sandouich",
       "sourceRoot": "projects/sandouich/src",
-      "prefix": "lib",
+      "prefix": "sand",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

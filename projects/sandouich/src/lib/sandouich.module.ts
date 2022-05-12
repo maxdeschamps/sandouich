@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { SandouichComponent } from './sandouich.component';
+import { CardComponent } from './card/card.component';
 
-
+const COMPONENTS = [SandouichComponent];
 
 @NgModule({
   declarations: [
-    SandouichComponent
+    COMPONENTS,
+    SandouichComponent,
+    CardComponent,
   ],
   imports: [
   ],
