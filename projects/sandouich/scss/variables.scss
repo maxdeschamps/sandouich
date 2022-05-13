@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+// Colors
+$bg-color: (
+    'primary': #46B0FA,
+    'success': #43F058,
+    'info': #B04BE3,
+    'warning': #EBC634,
+    'error': #CF6042,
+    'gray1': #424146,
+    'gray2': #777780,
+    'gray3': #D7D6E6,
+    'default': #262626,
+);
+
+$text-color: (
+    'primary': #46B0FA,
+    'success': #43F058,
+    'info': #B04BE3,
+    'warning': #EBC634,
+    'error': #CF6042,
+    'gray1': #424146,
+    'gray2': #777780,
+    'gray3': #D7D6E6,
+    'title': #262626,
+    'default': #363636,
+);
+
+// Font
+$font-size-desktop: (
+    'default': 13px,
+    'h1': 40px,
+    'h2': 30px,
+    'h3': 22px,
+    'h4': 18px,
+    'nav': 12px,
+    'header': 15px,
+    'footer': 10px,
+);
+
+$font-size-mobile: (
+    'default': 13px,
+    'h1': 35px,
+    'h2': 25px,
+    'h3': 20px,
+    'h4': 16px,
+    'nav': 12px,
+    'header': 14px,
+    'footer': 10px,
+);
+
+$font-weight: (
+    'light': 300,
+    'regular': 400,
+    'medium': 500,
+    'semibold': 600,
+    'bold': 700,
+);
+
+// Content
+*,
+.p,
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: map_get($font-weight, 'regular');
+    color: map_get($text-color, 'default');
+}
+
+.h1,
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: map_get($font-weight, 'bold');
+    color: map_get($text-color, 'title');
+}
+
+.h2,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: map_get($font-weight, 'bold');
+    color: map_get($text-color, 'title');
+}
+
+.h3,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: map_get($font-weight, 'semibold');
+    color: map_get($text-color, 'title');
+}
+
+.h4,
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: map_get($font-weight, 'medium');
+    color: map_get($text-color, 'title');
+}
