@@ -3,42 +3,45 @@
 
 // Colors
 $color: (
-    'primary': #46B0FA,
     'success': #43F058,
-    'info': #B04BE3,
+    'info': #46B0FA,
     'warning': #EBC634,
     'error': #CF6042,
     'border': #777780,
-);
-
-$bg-color: (
-    'primary': map_get($color, 'primary'),
-    'success': map_get($color, 'success'),
-    'info': map_get($color, 'info'),
-    'warning': map_get($color, 'warning'),
-    'error': map_get($color, 'error'),
     'grey1': #424146,
     'grey2': #777780,
     'grey3': #D7D6E6,
     'default': #262626,
 );
 
-$text-color: (
-    'primary': map_get($color, 'primary'),
+$bg-color: (
     'success': map_get($color, 'success'),
     'info': map_get($color, 'info'),
     'warning': map_get($color, 'warning'),
     'error': map_get($color, 'error'),
-    'grey1': #424146,
-    'grey2': #777780,
-    'grey3': #D7D6E6,
+    'grey1': map_get($color, 'grey1'),
+    'grey2': map_get($color, 'grey2'),
+    'grey3': map_get($color, 'grey3'),
+    'default': map_get($color, 'default'),
+);
+
+$text-color: (
+    'success': map_get($color, 'success'),
+    'info': map_get($color, 'info'),
+    'warning': map_get($color, 'warning'),
+    'error': map_get($color, 'error'),
+    'grey1': map_get($color, 'grey1'),
+    'grey2': map_get($color, 'grey2'),
+    'grey3': map_get($color, 'grey3'),
     'title': #262626,
     'default': #363636,
+    'button': #fafafa
 );
 
 // Font
 $font-size-desktop: (
     'default': 13px,
+    'button': 16px,
     'h1': 40px,
     'h2': 30px,
     'h3': 22px,
@@ -50,6 +53,7 @@ $font-size-desktop: (
 
 $font-size-mobile: (
     'default': 13px,
+    'button': 16px,
     'h1': 35px,
     'h2': 25px,
     'h3': 20px,
@@ -69,7 +73,7 @@ $font-weight: (
 
 // Border radius
 $border-radius: (
-    'button': 10px
+    'button': 5px
 );
 
 // Content
