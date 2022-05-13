@@ -1,17 +1,5 @@
-<!-- <div class="tab-group">
-  <ng-content></ng-content>
-</div>
-
-<ul class="tab-group">
-  <li *ngFor="let tab of tabs" (click)="selectTab(tab)">
-    {{tab.label}}
-  </li>
-</ul>
--->
-<p>CSS</p>
-
-<ul class="tab-group">
-  <li class="tab-item" *ngFor="let tab of tabs" (click)="selectTab(tab)" [ngClass]="{'selected':tab.active}">
+<ul class="lib-sandouich-tab-group">
+  <li class="lib-sandouich-tab-item" *ngFor="let tab of tabs" (click)="selectTab(tab)" [ngClass]="{'selected':tab.active}">
     {{ tab.label }}
   </li>
 </ul>
