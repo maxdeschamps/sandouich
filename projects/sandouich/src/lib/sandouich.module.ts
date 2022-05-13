@@ -5,6 +5,8 @@ import { TabGroupComponent } from './tab/tab-group/tab-group.component';
 import { TabItemComponent } from './tab/tab-item/tab-item.component';
 import { ButtonComponent } from './button/button.component';
 import { CommonModule } from "@angular/common"
+import {ListComponent} from "./list/list.component";
+import { ListItemComponent } from './list/list-item/list-item.component';
 
 const COMPONENTS = [SandouichComponent];
 
@@ -16,6 +18,8 @@ const COMPONENTS = [SandouichComponent];
     TabGroupComponent,
     TabItemComponent,
     ButtonComponent,
+    ListComponent,
+    ListItemComponent,
   ],
   imports: [
     CommonModule
@@ -26,6 +30,8 @@ const COMPONENTS = [SandouichComponent];
     TabGroupComponent,
     TabItemComponent,
     ButtonComponent,
+    ListComponent,
+    ListItemComponent,
   ]
 })
 export class SandouichModule { }
