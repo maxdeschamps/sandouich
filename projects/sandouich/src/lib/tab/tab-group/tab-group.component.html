@@ -1,0 +1,8 @@
+<ul class="lib-sandouich-tab-group">
+  <li class="lib-sandouich-tab-item" *ngFor="let tab of tabs" (click)="selectTab(tab)" [ngClass]="{'selected':tab.active}">
+    {{ tab.label }}
+  </li>
+</ul>
+<ng-content></ng-content>
+
+

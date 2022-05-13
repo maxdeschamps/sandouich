@@ -1,12 +1,12 @@
-@import "../../../scss/variables";
+@import "../../../../scss/variables";
 
-.tab-group {
+.lib-sandouich-tab-group {
   list-style: none;
   display: flex;
   padding: 20px 0 0px 0px;
 }
 
-.tab-item {
+.lib-sandouich-tab-item {
   margin-right: 25px;
   cursor: pointer;
 }
