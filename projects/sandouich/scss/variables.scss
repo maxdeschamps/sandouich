@@ -2,27 +2,36 @@
 
 
 // Colors
-$bg-color: (
+$color: (
     'primary': #46B0FA,
     'success': #43F058,
     'info': #B04BE3,
     'warning': #EBC634,
     'error': #CF6042,
-    'gray1': #424146,
-    'gray2': #777780,
-    'gray3': #D7D6E6,
+    'border': #777780,
+);
+
+$bg-color: (
+    'primary': map_get($color, 'primary'),
+    'success': map_get($color, 'success'),
+    'info': map_get($color, 'info'),
+    'warning': map_get($color, 'warning'),
+    'error': map_get($color, 'error'),
+    'grey1': #424146,
+    'grey2': #777780,
+    'grey3': #D7D6E6,
     'default': #262626,
 );
 
 $text-color: (
-    'primary': #46B0FA,
-    'success': #43F058,
-    'info': #B04BE3,
-    'warning': #EBC634,
-    'error': #CF6042,
-    'gray1': #424146,
-    'gray2': #777780,
-    'gray3': #D7D6E6,
+    'primary': map_get($color, 'primary'),
+    'success': map_get($color, 'success'),
+    'info': map_get($color, 'info'),
+    'warning': map_get($color, 'warning'),
+    'error': map_get($color, 'error'),
+    'grey1': #424146,
+    'grey2': #777780,
+    'grey3': #D7D6E6,
     'title': #262626,
     'default': #363636,
 );
@@ -56,6 +65,11 @@ $font-weight: (
     'medium': 500,
     'semibold': 600,
     'bold': 700,
+);
+
+// Border radius
+$border-radius: (
+    'button': 10px
 );
 
 // Content
