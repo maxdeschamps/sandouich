@@ -1,26 +1,28 @@
+@import "../../../scss/variables";
+
 .lib-sandouich-card {
   width: calc(100% - 2px);
   border-radius: .25rem;
 
-  border: 1px solid #9a9a9a;
-  background: #e5e5e5;
-  color: black;
+  border: 1px solid map_get($bg-color, default);
+  background: map_get($bg-color, grey3);
 
   > .lib-sandouich-card- {
     &header {
       padding: 15px 12px;
 
-      background: #505050;
+      background: map_get($bg-color, grey1);
       color: white;
     }
     &body {
       padding: 15px;
       display: flex;
 
-      border: 1px solid #9a9a9a;
+      border: 1px solid map_get($bg-color, grey2);
       background: white;
 
       img {
+        border-radius: .25rem;
         width: 100%;
         margin: auto;
       }
