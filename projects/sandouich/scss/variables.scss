@@ -79,6 +79,10 @@ p {
     font-family: 'Lato', sans-serif;
     font-weight: map_get($font-weight, 'regular');
     color: map_get($text-color, 'default');
+    font-size: map_get($font-size-desktop, 'default');
+    @media screen and (max-width: 410px) {
+        font-size: map_get($font-size-mobile, 'default');
+    }
 }
 
 .h1,
@@ -86,6 +90,10 @@ h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: map_get($font-weight, 'bold');
     color: map_get($text-color, 'title');
+    font-size: map_get($font-size-desktop, 'h1');
+    @media screen and (max-width: 410px) {
+        font-size: map_get($font-size-mobile, 'h1');
+    }
 }
 
 .h2,
@@ -93,6 +101,10 @@ h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: map_get($font-weight, 'bold');
     color: map_get($text-color, 'title');
+    font-size: map_get($font-size-desktop, 'h2');
+    @media screen and (max-width: 410px) {
+        font-size: map_get($font-size-mobile, 'h2');
+    }
 }
 
 .h3,
@@ -100,6 +112,10 @@ h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: map_get($font-weight, 'semibold');
     color: map_get($text-color, 'title');
+    font-size: map_get($font-size-desktop, 'h3');
+    @media screen and (max-width: 410px) {
+        font-size: map_get($font-size-mobile, 'h3');
+    }
 }
 
 .h4,
@@ -107,4 +123,8 @@ h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: map_get($font-weight, 'medium');
     color: map_get($text-color, 'title');
+    font-size: map_get($font-size-desktop, 'h4');
+    @media screen and (max-width: 410px) {
+        font-size: map_get($font-size-mobile, 'h4');
+    }
 }
