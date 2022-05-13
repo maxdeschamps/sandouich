@@ -9,8 +9,24 @@ button {
     font-size: map-get($font-size-desktop, 'button');
     border: solid black 2px;
     cursor: pointer;
+
     @media screen and (max-width: 410px) {
         font-size: map-get($font-size-mobile, 'button');
+    }
+
+    background-color: map_get($bg-color, 'default');
+    border-color: map_get($bg-color, 'default');
+    &:hover {
+        background-color: darken(map_get($bg-color, 'default'), 10%);
+    }
+
+    &.secondary {
+        color: map_get($text-color, 'default');
+        &:hover {
+            border-color: map_get($bg-color, 'default');
+            color: map_get($bg-color, 'default');
+            background-color: map_get($bg-color, 'default');
+        }
     }
 
     &.info {
@@ -81,23 +97,6 @@ button {
                 border-color: map_get($bg-color, 'error');
                 color: map_get($bg-color, 'error');
                 background-color: map_get($bg-color, 'error');
-            }
-        }
-    }
-
-    &.default {
-        background-color: map_get($bg-color, 'default');
-        border-color: map_get($bg-color, 'default');
-        &:hover {
-            background-color: darken(map_get($bg-color, 'default'), 10%);
-        }
-
-        &.secondary {
-            color: map_get($text-color, 'default');
-            &:hover {
-                border-color: map_get($bg-color, 'default');
-                color: map_get($bg-color, 'default');
-                background-color: map_get($bg-color, 'default');
             }
         }
     }
