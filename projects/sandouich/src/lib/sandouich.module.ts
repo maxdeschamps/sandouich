@@ -20,9 +20,11 @@ const COMPONENTS = [SandouichComponent];
     ButtonComponent,
     ListComponent,
     ListItemComponent,
+    InputComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     SandouichComponent,
@@ -32,6 +34,7 @@ const COMPONENTS = [SandouichComponent];
     ButtonComponent,
     ListComponent,
     ListItemComponent,
+    InputComponent
   ]
 })
 export class SandouichModule { }
