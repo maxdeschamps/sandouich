@@ -1,0 +1,28 @@
+@import '../../../scss/variables';
+
+button {
+    border: none;
+    border-radius: map_get($border-radius, 'button');
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.primary {
+    background-color: map_get($bg-color, 'primary');
+}
+
+.success {
+    background-color: map_get($bg-color, 'success');
+}
+
+.info {
+    background-color: map_get($bg-color, 'info');
+}
+
+.warning {
+    background-color: map_get($bg-color, 'warning');
+}
+
+.error {
+    background-color: map_get($bg-color, 'error');
+}
