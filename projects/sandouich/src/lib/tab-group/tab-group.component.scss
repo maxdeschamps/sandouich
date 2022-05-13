@@ -1,0 +1,20 @@
+@import "../../../scss/variables";
+
+.tab-group {
+  list-style: none;
+  display: flex;
+  padding: 20px 0 0px 0px;
+}
+
+.tab-item {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.selected {
+  font-weight: bold;
+  color: cadetblue;
+  border-bottom: 2px solid cadetblue;
+}
+
+
