@@ -2,13 +2,34 @@
 
 button {
     border: none;
+    position: relative;
     border-radius: map_get($border-radius, 'button');
-    color: map_get($text-color, 'button');
-    padding: 7px 15px;
+    padding: 0.5rem 1rem;
     text-align: center;
-    font-size: map-get($font-size-desktop, 'button');
-    border: solid black 2px;
+    border: solid black 0.125rem;
+    overflow: hidden;
     cursor: pointer;
+    transition: $transition;
+
+    .text {
+        color: map_get($text-color, 'button');
+        text-align: center;
+        font-size: map-get($font-size-desktop, 'button');
+        position: relative;
+        z-index: 2;
+    }
+
+    .background {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        background-color: rgba(255, 255, 255, .2);
+        z-index: 1;
+        transition: $transition;
+    }
 
     @media screen and (max-width: 410px) {
         font-size: map-get($font-size-mobile, 'button');
@@ -20,12 +41,22 @@ button {
         background-color: darken(map_get($bg-color, 'default'), 10%);
     }
 
+    &:active {
+        .background {
+            width: 100%;
+        }
+    }
+
     &.secondary {
-        color: map_get($text-color, 'default');
+        .text {
+            color: map_get($text-color, 'default');
+        }
         &:hover {
             border-color: map_get($bg-color, 'default');
-            color: map_get($bg-color, 'default');
             background-color: map_get($bg-color, 'default');
+            .text {
+                color: map_get($bg-color, 'default');
+            }
         }
     }
 
@@ -38,11 +69,15 @@ button {
         }
 
         &.secondary {
-            color: map_get($text-color, 'info');
+            .text {
+                color: map_get($text-color, 'info');
+            }
             &:hover {
                 border-color: map_get($bg-color, 'info');
-                color: map_get($bg-color, 'info');
                 background-color: map_get($bg-color, 'info');
+                .text {
+                    color: map_get($bg-color, 'info');
+                }
             }
         }
     }
@@ -56,11 +91,15 @@ button {
         }
 
         &.secondary {
-            color: map_get($text-color, 'success');
+            .text {
+                color: map_get($text-color, 'success');
+            }
             &:hover {
                 border-color: map_get($bg-color, 'success');
-                color: map_get($bg-color, 'success');
                 background-color: map_get($bg-color, 'success');
+                .text {
+                    color: map_get($bg-color, 'success');
+                }
             }
         }
     }
@@ -74,11 +113,15 @@ button {
         }
 
         &.secondary {
-            color: map_get($text-color, 'warning');
+            .text {
+                color: map_get($text-color, 'warning');
+            }
             &:hover {
                 border-color: map_get($bg-color, 'warning');
-                color: map_get($bg-color, 'warning');
                 background-color: map_get($bg-color, 'warning');
+                .text {
+                    color: map_get($bg-color, 'warning');
+                }
             }
         }
     }
@@ -92,11 +135,15 @@ button {
         }
 
         &.secondary {
-            color: map_get($text-color, 'error');
+            .text {
+                color: map_get($text-color, 'error');
+            }
             &:hover {
                 border-color: map_get($bg-color, 'error');
-                color: map_get($bg-color, 'error');
                 background-color: map_get($bg-color, 'error');
+                .text {
+                    color: map_get($bg-color, 'error');
+                }
             }
         }
     }
@@ -104,11 +151,16 @@ button {
     &.secondary {
         background-color: transparent;
         &:hover {
-            color: map_get($text-color, 'button') !important;
+            .text {
+                color: map_get($text-color, 'button') !important;
+            }
         }
     }
 
     &.round {
         border-radius: 1000px;
+        .background {
+            border-radius: 1000px;
+        }
     }
 }
