@@ -40,27 +40,27 @@ $text-color: (
 
 // Font
 $font-size-desktop: (
-    'default': 13px,
-    'button': 16px,
-    'h1': 40px,
-    'h2': 30px,
-    'h3': 22px,
-    'h4': 18px,
-    'nav': 12px,
-    'header': 15px,
-    'footer': 10px,
+    'default': 0.8rem,
+    'button': 1rem,
+    'h1': 3rem,
+    'h2': 2rem,
+    'h3': 1.3rem,
+    'h4': 1.1rem,
+    'nav': 0.8rem,
+    'header': 0.9rem,
+    'footer': 0.6rem,
 );
 
 $font-size-mobile: (
-    'default': 13px,
-    'button': 16px,
-    'h1': 35px,
-    'h2': 25px,
-    'h3': 20px,
-    'h4': 16px,
-    'nav': 12px,
-    'header': 14px,
-    'footer': 10px,
+    'default': 0.8rem,
+    'button': 1rem,
+    'h1': 2rem,
+    'h2': 1.6rem,
+    'h3': 1.3rem,
+    'h4': 1rem,
+    'nav': 0.8rem,
+    'header': 0.9rem,
+    'footer': 0.6rem,
 );
 
 $font-weight: (
@@ -71,10 +71,18 @@ $font-weight: (
     'bold': 700,
 );
 
+// Transition
+$transition: all .2s ease;
+
 // Border radius
 $border-radius: (
-    'button': 5px
+    'button': 0.3rem
 );
+
+// Init
+html {
+    font-size: 100%;
+}
 
 // Content
 *,
