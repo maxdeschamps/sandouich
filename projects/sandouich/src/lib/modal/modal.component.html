@@ -1,0 +1,13 @@
+<div *ngIf="display" class="lib-sandouich-modal">
+  <div class="lib-sandouich-modal-title">
+    <ng-content select="[title]"></ng-content>
+  </div>
+  <div class="lib-sandouich-modal-detail">
+    <ng-content select="[detail]"></ng-content>
+  </div>
+  <div class="lib-sandouich-modal-action">
+    <sand-button (click)="modalService.disable()">Annuler</sand-button>
+    <ng-content select="[action]"></ng-content>
+  </div>
+</div>
+

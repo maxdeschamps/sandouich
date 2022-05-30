@@ -10,6 +10,8 @@ import { ListItemComponent } from './list/list-item/list-item.component';
 import {InputComponent} from "./input/input.component";
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ContainerComponent } from './container/container.component';
+import { ModalComponent } from './modal/modal.component';
+
 const COMPONENTS = [SandouichComponent];
 
 @NgModule({
@@ -24,6 +26,7 @@ const COMPONENTS = [SandouichComponent];
     ListItemComponent,
     InputComponent,
     ContainerComponent,
+    ModalComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +43,7 @@ const COMPONENTS = [SandouichComponent];
     ListItemComponent,
     InputComponent,
     ContainerComponent,
+    ModalComponent,
   ]
 })
 export class SandouichModule { }
