@@ -15,7 +15,6 @@ export class ModalComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.modalService.display.pipe(takeUntil(this.unsub)).subscribe(event => {
-      alert('not closed');
       this.display = event;
     })
   }
