@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, NgZone } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
@@ -8,17 +8,22 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class InputComponent implements OnInit {
 
-  @Input() name = new FormControl();
+  @Input() formValue = new FormControl();
 
   @Input() label:string = "";
   @Input() type:string = "text";
   @Input() placeholder:string = "";
+
+  @Output() valueChange = new EventEmitter();
+
 
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 
 
