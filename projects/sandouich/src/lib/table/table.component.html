@@ -1,4 +1,4 @@
-<div class="container">
+<sand-container>
   <ul class="responsive-table" *ngIf="headers.length >0">
     <li class="table-header" [ngClass]="color">
       <div class="col title" *ngFor="let header of headers">{{header.label}}</div>
@@ -7,4 +7,4 @@
       <div class="col text" *ngFor="let currentInfo of row" [attr.data-label]="currentInfo.headerLabel">{{currentInfo.value}}</div>
     </li>
   </ul>
-</div>
+</sand-container>
