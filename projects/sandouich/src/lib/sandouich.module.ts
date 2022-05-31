@@ -51,6 +51,7 @@ const COMPONENTS = [SandouichComponent];
     ContainerComponent,
     ModalComponent,
     IframeComponent,
+    TableComponent
   ]
 })
 export class SandouichModule { }
