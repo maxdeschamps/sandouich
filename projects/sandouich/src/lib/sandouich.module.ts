@@ -11,6 +11,8 @@ import {InputComponent} from "./input/input.component";
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ContainerComponent } from './container/container.component';
 import { ModalComponent } from './modal/modal.component';
+import { IframeComponent } from './iframe/iframe.component';
+import { SafePipe } from './safe.pipe';
 
 const COMPONENTS = [SandouichComponent];
 
@@ -27,6 +29,8 @@ const COMPONENTS = [SandouichComponent];
     InputComponent,
     ContainerComponent,
     ModalComponent,
+    IframeComponent,
+    SafePipe,
   ],
   imports: [
     CommonModule,
@@ -44,6 +48,7 @@ const COMPONENTS = [SandouichComponent];
     InputComponent,
     ContainerComponent,
     ModalComponent,
+    IframeComponent,
   ]
 })
 export class SandouichModule { }
