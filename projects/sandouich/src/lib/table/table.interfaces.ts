@@ -1,4 +1,4 @@
-export default interface TableHeader {
+export interface TableHeader {
   label :string,
   name :string,
   order : number

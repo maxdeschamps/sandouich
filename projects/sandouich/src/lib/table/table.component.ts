@@ -1,5 +1,5 @@
 import { Component , Input, Output , EventEmitter} from '@angular/core';
-import TableHeader , {TableRow } from './table.interfaces';
+import  {TableHeader ,TableRow } from './table.interfaces';
 
 @Component({
   selector: 'sand-table',
