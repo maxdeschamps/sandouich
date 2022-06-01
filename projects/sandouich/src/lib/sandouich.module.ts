@@ -12,6 +12,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContainerComponent } from './container/container.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BurgerComponent } from './burger/burger.component';
+import { ModalComponent } from './modal/modal.component';
+import { TableComponent } from './table/table.component';
+import { IframeComponent } from './iframe/iframe.component';
+import { SafePipe } from './safe.pipe';
+
 const COMPONENTS = [SandouichComponent];
 
 @NgModule({
@@ -28,6 +33,10 @@ const COMPONENTS = [SandouichComponent];
     ContainerComponent,
     NavbarComponent,
     BurgerComponent,
+    ModalComponent,
+    TableComponent,
+    IframeComponent,
+    SafePipe,
   ],
   imports: [
     CommonModule,
@@ -46,6 +55,9 @@ const COMPONENTS = [SandouichComponent];
     ContainerComponent,
     NavbarComponent,
     BurgerComponent
+    ModalComponent,
+    IframeComponent,
+    TableComponent
   ]
 })
 export class SandouichModule { }

@@ -31,7 +31,7 @@ button {
         transition: $transition;
     }
 
-    @media screen and (max-width: 410px) {
+    @media screen and (max-width: 25.625rem) {
         font-size: map-get($font-size-mobile, 'button');
     }
 
@@ -81,7 +81,7 @@ button {
             }
         }
     }
-    
+
     &.success {
         background-color: map-get($bg-color, 'success');
         border-color: map-get($bg-color, 'success');
@@ -103,7 +103,7 @@ button {
             }
         }
     }
-    
+
     &.warning {
         background-color: map-get($bg-color, 'warning');
         border-color: map-get($bg-color, 'warning');
@@ -125,7 +125,7 @@ button {
             }
         }
     }
-    
+
     &.error {
         background-color: map-get($bg-color, 'error');
         border-color: map-get($bg-color, 'error');
@@ -158,9 +158,9 @@ button {
     }
 
     &.round {
-        border-radius: 1000px;
+        border-radius: 62.5rem;
         .background {
-            border-radius: 1000px;
+            border-radius: 62.5rem;
         }
     }
 }
