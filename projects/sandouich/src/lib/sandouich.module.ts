@@ -15,7 +15,7 @@ import { BurgerComponent } from './burger/burger.component';
 import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './table/table.component';
 import { IframeComponent } from './iframe/iframe.component';
-import { SafePipe } from './safe.pipe';
+import { SafePipe } from './pipe/safe.pipe';
 
 const COMPONENTS = [SandouichComponent];
 
