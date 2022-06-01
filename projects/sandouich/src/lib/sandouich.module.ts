@@ -54,7 +54,7 @@ const COMPONENTS = [SandouichComponent];
     InputComponent,
     ContainerComponent,
     NavbarComponent,
-    BurgerComponent
+    BurgerComponent,
     ModalComponent,
     IframeComponent,
     TableComponent
