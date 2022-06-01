@@ -17,6 +17,7 @@ import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './table/table.component';
 import { IframeComponent } from './iframe/iframe.component';
 import { SafePipe } from './pipe/safe.pipe';
+import { GalleryComponent } from './gallery/gallery.component';
 import { RouterModule } from '@angular/router';
 
 const COMPONENTS = [SandouichComponent];
@@ -40,6 +41,7 @@ const COMPONENTS = [SandouichComponent];
     IframeComponent,
     SafePipe,
     NavLinkComponent,
+    GalleryComponent,
   ],
   imports: [
     CommonModule,
@@ -62,7 +64,9 @@ const COMPONENTS = [SandouichComponent];
     ModalComponent,
     IframeComponent,
     TableComponent,
-    NavLinkComponent
+    NavLinkComponent,
+    TableComponent,
+    GalleryComponent,
   ]
 })
 export class SandouichModule { }
