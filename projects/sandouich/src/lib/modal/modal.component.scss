@@ -11,6 +11,7 @@
   flex-direction: column;
   background: map_get($bg-color, 'grey3');
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  z-index: 9999;
 }
 
 .lib-sandouich-modal-title{
@@ -28,5 +29,5 @@
   padding-top: 0.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
