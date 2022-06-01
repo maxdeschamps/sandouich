@@ -5,11 +5,13 @@ import { TabGroupComponent } from './tab/tab-group/tab-group.component';
 import { TabItemComponent } from './tab/tab-item/tab-item.component';
 import { ButtonComponent } from './button/button.component';
 import { CommonModule } from "@angular/common"
-import {ListComponent} from "./list/list.component";
+import { ListComponent } from "./list/list.component";
 import { ListItemComponent } from './list/list-item/list-item.component';
-import {InputComponent} from "./input/input.component";
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { InputComponent } from "./input/input.component";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContainerComponent } from './container/container.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BurgerComponent } from './burger/burger.component';
 const COMPONENTS = [SandouichComponent];
 
 @NgModule({
@@ -24,6 +26,8 @@ const COMPONENTS = [SandouichComponent];
     ListItemComponent,
     InputComponent,
     ContainerComponent,
+    NavbarComponent,
+    BurgerComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +44,8 @@ const COMPONENTS = [SandouichComponent];
     ListItemComponent,
     InputComponent,
     ContainerComponent,
+    NavbarComponent,
+    BurgerComponent
   ]
 })
 export class SandouichModule { }

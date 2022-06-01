@@ -15,24 +15,24 @@ $color: (
 );
 
 $bg-color: (
-    'success': map_get($color, 'success'),
-    'info': map_get($color, 'info'),
-    'warning': map_get($color, 'warning'),
-    'error': map_get($color, 'error'),
-    'grey1': map_get($color, 'grey1'),
-    'grey2': map_get($color, 'grey2'),
-    'grey3': map_get($color, 'grey3'),
-    'default': map_get($color, 'default'),
+    'success': map-get($color, 'success'),
+    'info': map-get($color, 'info'),
+    'warning': map-get($color, 'warning'),
+    'error': map-get($color, 'error'),
+    'grey1': map-get($color, 'grey1'),
+    'grey2': map-get($color, 'grey2'),
+    'grey3': map-get($color, 'grey3'),
+    'default': map-get($color, 'default'),
 );
 
 $text-color: (
-    'success': map_get($color, 'success'),
-    'info': map_get($color, 'info'),
-    'warning': map_get($color, 'warning'),
-    'error': map_get($color, 'error'),
-    'grey1': map_get($color, 'grey1'),
-    'grey2': map_get($color, 'grey2'),
-    'grey3': map_get($color, 'grey3'),
+    'success': map-get($color, 'success'),
+    'info': map-get($color, 'info'),
+    'warning': map-get($color, 'warning'),
+    'error': map-get($color, 'error'),
+    'grey1': map-get($color, 'grey1'),
+    'grey2': map-get($color, 'grey2'),
+    'grey3': map-get($color, 'grey3'),
     'title': #262626,
     'default': #363636,
     'button': #fafafa
@@ -89,54 +89,54 @@ html {
 .p,
 p {
     font-family: 'Lato', sans-serif;
-    font-weight: map_get($font-weight, 'regular');
-    color: map_get($text-color, 'default');
-    font-size: map_get($font-size-desktop, 'default');
+    font-weight: map-get($font-weight, 'regular');
+    color: map-get($text-color, 'default');
+    font-size: map-get($font-size-desktop, 'default');
     @media screen and (max-width: 410px) {
-        font-size: map_get($font-size-mobile, 'default');
+        font-size: map-get($font-size-mobile, 'default');
     }
 }
 
 .h1,
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-weight: map_get($font-weight, 'bold');
-    color: map_get($text-color, 'title');
-    font-size: map_get($font-size-desktop, 'h1');
+    font-weight: map-get($font-weight, 'bold');
+    color: map-get($text-color, 'title');
+    font-size: map-get($font-size-desktop, 'h1');
     @media screen and (max-width: 410px) {
-        font-size: map_get($font-size-mobile, 'h1');
+        font-size: map-get($font-size-mobile, 'h1');
     }
 }
 
 .h2,
 h2 {
     font-family: 'Poppins', sans-serif;
-    font-weight: map_get($font-weight, 'bold');
-    color: map_get($text-color, 'title');
-    font-size: map_get($font-size-desktop, 'h2');
+    font-weight: map-get($font-weight, 'bold');
+    color: map-get($text-color, 'title');
+    font-size: map-get($font-size-desktop, 'h2');
     @media screen and (max-width: 410px) {
-        font-size: map_get($font-size-mobile, 'h2');
+        font-size: map-get($font-size-mobile, 'h2');
     }
 }
 
 .h3,
 h3 {
     font-family: 'Poppins', sans-serif;
-    font-weight: map_get($font-weight, 'semibold');
-    color: map_get($text-color, 'title');
-    font-size: map_get($font-size-desktop, 'h3');
+    font-weight: map-get($font-weight, 'semibold');
+    color: map-get($text-color, 'title');
+    font-size: map-get($font-size-desktop, 'h3');
     @media screen and (max-width: 410px) {
-        font-size: map_get($font-size-mobile, 'h3');
+        font-size: map-get($font-size-mobile, 'h3');
     }
 }
 
 .h4,
 h4 {
     font-family: 'Poppins', sans-serif;
-    font-weight: map_get($font-weight, 'medium');
-    color: map_get($text-color, 'title');
-    font-size: map_get($font-size-desktop, 'h4');
+    font-weight: map-get($font-weight, 'medium');
+    color: map-get($text-color, 'title');
+    font-size: map-get($font-size-desktop, 'h4');
     @media screen and (max-width: 410px) {
-        font-size: map_get($font-size-mobile, 'h4');
+        font-size: map-get($font-size-mobile, 'h4');
     }
 }

@@ -1,0 +1,10 @@
+<sand-burger class="margin-right" (event)="handleMenu($event)"></sand-burger>
+<header [ngClass]="{'open':open}" class="navbar">
+  <div class="title">
+    <h1>{{ site_title }}</h1>
+  </div>
+  <nav>
+    <ng-content select="[nav]" class="menu">
+    </ng-content>
+  </nav>
+</header>

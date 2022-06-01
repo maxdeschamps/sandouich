@@ -3,7 +3,7 @@
 button {
     border: none;
     position: relative;
-    border-radius: map_get($border-radius, 'button');
+    border-radius: map-get($border-radius, 'button');
     padding: 0.5rem 1rem;
     text-align: center;
     border: solid black 0.125rem;
@@ -12,7 +12,7 @@ button {
     transition: $transition;
 
     .text {
-        color: map_get($text-color, 'button');
+        color: map-get($text-color, 'button');
         text-align: center;
         font-size: map-get($font-size-desktop, 'button');
         position: relative;
@@ -35,10 +35,10 @@ button {
         font-size: map-get($font-size-mobile, 'button');
     }
 
-    background-color: map_get($bg-color, 'default');
-    border-color: map_get($bg-color, 'default');
+    background-color: map-get($bg-color, 'default');
+    border-color: map-get($bg-color, 'default');
     &:hover {
-        background-color: darken(map_get($bg-color, 'default'), 10%);
+        background-color: darken(map-get($bg-color, 'default'), 10%);
     }
 
     &:active {
@@ -49,100 +49,100 @@ button {
 
     &.secondary {
         .text {
-            color: map_get($text-color, 'default');
+            color: map-get($text-color, 'default');
         }
         &:hover {
-            border-color: map_get($bg-color, 'default');
-            background-color: map_get($bg-color, 'default');
+            border-color: map-get($bg-color, 'default');
+            background-color: map-get($bg-color, 'default');
             .text {
-                color: map_get($bg-color, 'default');
+                color: map-get($bg-color, 'default');
             }
         }
     }
 
     &.info {
-        background-color: map_get($bg-color, 'info');
-        border-color: map_get($bg-color, 'info');
+        background-color: map-get($bg-color, 'info');
+        border-color: map-get($bg-color, 'info');
         &:hover {
-            border-color: darken(map_get($bg-color, 'info'), 10%);
-            background-color: darken(map_get($bg-color, 'info'), 10%);
+            border-color: darken(map-get($bg-color, 'info'), 10%);
+            background-color: darken(map-get($bg-color, 'info'), 10%);
         }
 
         &.secondary {
             .text {
-                color: map_get($text-color, 'info');
+                color: map-get($text-color, 'info');
             }
             &:hover {
-                border-color: map_get($bg-color, 'info');
-                background-color: map_get($bg-color, 'info');
+                border-color: map-get($bg-color, 'info');
+                background-color: map-get($bg-color, 'info');
                 .text {
-                    color: map_get($bg-color, 'info');
+                    color: map-get($bg-color, 'info');
                 }
             }
         }
     }
     
     &.success {
-        background-color: map_get($bg-color, 'success');
-        border-color: map_get($bg-color, 'success');
+        background-color: map-get($bg-color, 'success');
+        border-color: map-get($bg-color, 'success');
         &:hover {
-            border-color: darken(map_get($bg-color, 'success'), 10%);
-            background-color: darken(map_get($bg-color, 'success'), 10%);
+            border-color: darken(map-get($bg-color, 'success'), 10%);
+            background-color: darken(map-get($bg-color, 'success'), 10%);
         }
 
         &.secondary {
             .text {
-                color: map_get($text-color, 'success');
+                color: map-get($text-color, 'success');
             }
             &:hover {
-                border-color: map_get($bg-color, 'success');
-                background-color: map_get($bg-color, 'success');
+                border-color: map-get($bg-color, 'success');
+                background-color: map-get($bg-color, 'success');
                 .text {
-                    color: map_get($bg-color, 'success');
+                    color: map-get($bg-color, 'success');
                 }
             }
         }
     }
     
     &.warning {
-        background-color: map_get($bg-color, 'warning');
-        border-color: map_get($bg-color, 'warning');
+        background-color: map-get($bg-color, 'warning');
+        border-color: map-get($bg-color, 'warning');
         &:hover {
-            border-color: darken(map_get($bg-color, 'warning'), 10%);
-            background-color: darken(map_get($bg-color, 'warning'), 10%);
+            border-color: darken(map-get($bg-color, 'warning'), 10%);
+            background-color: darken(map-get($bg-color, 'warning'), 10%);
         }
 
         &.secondary {
             .text {
-                color: map_get($text-color, 'warning');
+                color: map-get($text-color, 'warning');
             }
             &:hover {
-                border-color: map_get($bg-color, 'warning');
-                background-color: map_get($bg-color, 'warning');
+                border-color: map-get($bg-color, 'warning');
+                background-color: map-get($bg-color, 'warning');
                 .text {
-                    color: map_get($bg-color, 'warning');
+                    color: map-get($bg-color, 'warning');
                 }
             }
         }
     }
     
     &.error {
-        background-color: map_get($bg-color, 'error');
-        border-color: map_get($bg-color, 'error');
+        background-color: map-get($bg-color, 'error');
+        border-color: map-get($bg-color, 'error');
         &:hover {
-            border-color: darken(map_get($bg-color, 'error'), 10%);
-            background-color: darken(map_get($bg-color, 'error'), 10%);
+            border-color: darken(map-get($bg-color, 'error'), 10%);
+            background-color: darken(map-get($bg-color, 'error'), 10%);
         }
 
         &.secondary {
             .text {
-                color: map_get($text-color, 'error');
+                color: map-get($text-color, 'error');
             }
             &:hover {
-                border-color: map_get($bg-color, 'error');
-                background-color: map_get($bg-color, 'error');
+                border-color: map-get($bg-color, 'error');
+                background-color: map-get($bg-color, 'error');
                 .text {
-                    color: map_get($bg-color, 'error');
+                    color: map-get($bg-color, 'error');
                 }
             }
         }
@@ -152,7 +152,7 @@ button {
         background-color: transparent;
         &:hover {
             .text {
-                color: map_get($text-color, 'button') !important;
+                color: map-get($text-color, 'button') !important;
             }
         }
     }

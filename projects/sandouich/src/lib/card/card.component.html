@@ -7,6 +7,8 @@
     <img *ngIf="src" class="lib-sandouich-card-img" src="{{ src }}" />
   </div>
   <div *ngIf="displayFooter" class="lib-sandouich-card-footer">
-    <ng-content select="[footer]"></ng-content>
+    <ng-content select="[footer]">
+      
+    </ng-content>
   </div>
 </div>
