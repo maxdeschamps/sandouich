@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router, Event, NavigationEnd} from '@angular/router';
 
 @Component({
   selector: 'sand-navbar',
@@ -7,10 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  site_title = "Mon site";
-  open = false ;
+  open = false;
 
-  @Input() currentRoute: string = "";
+  @Input() navbarTitle: string = "";
 
   constructor() { }
 

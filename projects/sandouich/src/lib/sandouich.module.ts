@@ -11,11 +11,13 @@ import { InputComponent } from "./input/input.component";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContainerComponent } from './container/container.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { BurgerComponent } from './burger/burger.component';
+import { NavBurgerComponent } from './navbar/nav-burger/nav-burger.component';
+import { NavLinkComponent } from './navbar/nav-link/nav-link.component';
 import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './table/table.component';
 import { IframeComponent } from './iframe/iframe.component';
 import { SafePipe } from './pipe/safe.pipe';
+import { RouterModule } from '@angular/router';
 
 const COMPONENTS = [SandouichComponent];
 
@@ -32,16 +34,18 @@ const COMPONENTS = [SandouichComponent];
     InputComponent,
     ContainerComponent,
     NavbarComponent,
-    BurgerComponent,
+    NavBurgerComponent,
     ModalComponent,
     TableComponent,
     IframeComponent,
     SafePipe,
+    NavLinkComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
   exports: [
     SandouichComponent,
@@ -54,10 +58,11 @@ const COMPONENTS = [SandouichComponent];
     InputComponent,
     ContainerComponent,
     NavbarComponent,
-    BurgerComponent,
+    NavBurgerComponent,
     ModalComponent,
     IframeComponent,
-    TableComponent
+    TableComponent,
+    NavLinkComponent
   ]
 })
 export class SandouichModule { }
