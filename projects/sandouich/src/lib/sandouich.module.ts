@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {DpDatePickerModule} from 'ng2-date-picker';
 import { SandouichComponent } from './sandouich.component';
 import { CardComponent } from './card/card.component';
 import { TabGroupComponent } from './tab/tab-group/tab-group.component';
@@ -46,6 +48,8 @@ const COMPONENTS = [SandouichComponent];
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    BrowserModule,
+    DpDatePickerModule,
   ],
   exports: [
     SandouichComponent,
