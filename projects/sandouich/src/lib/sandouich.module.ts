@@ -22,29 +22,30 @@ import { SelectComponent } from './select/select.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RouterModule } from '@angular/router';
 
-const COMPONENTS = [SandouichComponent];
+const COMPONENTS = [
+  SandouichComponent,
+  CardComponent,
+  TabGroupComponent,
+  TabItemComponent,
+  ButtonComponent,
+  ListComponent,
+  ListItemComponent,
+  InputComponent,
+  ContainerComponent,
+  NavbarComponent,
+  NavBurgerComponent,
+  ModalComponent,
+  TableComponent,
+  IframeComponent,
+  SafePipe,
+  NavLinkComponent,
+  GalleryComponent,
+  SelectComponent,
+];
 
 @NgModule({
   declarations: [
-    COMPONENTS,
-    SandouichComponent,
-    CardComponent,
-    TabGroupComponent,
-    TabItemComponent,
-    ButtonComponent,
-    ListComponent,
-    ListItemComponent,
-    InputComponent,
-    ContainerComponent,
-    NavbarComponent,
-    NavBurgerComponent,
-    ModalComponent,
-    TableComponent,
-    IframeComponent,
-    SafePipe,
-    NavLinkComponent,
-    GalleryComponent,
-    SelectComponent,
+    ...COMPONENTS,
   ],
   imports: [
     CommonModule,
@@ -54,25 +55,7 @@ const COMPONENTS = [SandouichComponent];
     RouterModule,
   ],
   exports: [
-    SandouichComponent,
-    CardComponent,
-    TabGroupComponent,
-    TabItemComponent,
-    ButtonComponent,
-    ListComponent,
-    ListItemComponent,
-    InputComponent,
-    ContainerComponent,
-    NavbarComponent,
-    NavBurgerComponent,
-    ModalComponent,
-    IframeComponent,
-    TableComponent,
-    SelectComponent
-    TableComponent,
-    NavLinkComponent,
-    TableComponent,
-    GalleryComponent,
+    ...COMPONENTS,
   ]
 })
 export class SandouichModule { }
