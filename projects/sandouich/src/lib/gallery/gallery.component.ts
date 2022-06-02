@@ -54,6 +54,17 @@ export class GalleryComponent implements OnInit {
     ]
   ];
 
+  selectedProject = new FormControl();
+
+  projects = [
+    { id: 1, name: "Let's jam" },
+    { id: 2, name: "Timer" },
+    { id: 3, name: "Open World" },
+    { id: 4, name: 'ERP' },
+  ];
+
+
+
   constructor(public modalService: ModalService) {
   }
 
