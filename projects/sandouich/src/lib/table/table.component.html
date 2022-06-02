@@ -1,6 +1,6 @@
 <div class="container">
 
-  <ul class="responsive-table" *ngIf="headers.length >0">
+  <ul class="responsive-table" *ngIf="headers.length">
     <li class="table-header" [ngClass]="color">
       <div class="col title" *ngFor="let header of headers">{{header.label}}</div>
     </li>
