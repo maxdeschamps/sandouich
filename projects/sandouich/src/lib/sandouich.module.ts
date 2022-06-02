@@ -37,7 +37,6 @@ const COMPONENTS = [
   ModalComponent,
   TableComponent,
   IframeComponent,
-  SafePipe,
   NavLinkComponent,
   GalleryComponent,
   SelectComponent,
@@ -46,6 +45,7 @@ const COMPONENTS = [
 @NgModule({
   declarations: [
     ...COMPONENTS,
+    SafePipe,
   ],
   imports: [
     CommonModule,
