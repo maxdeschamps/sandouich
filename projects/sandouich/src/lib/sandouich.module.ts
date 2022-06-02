@@ -17,6 +17,8 @@ import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './table/table.component';
 import { IframeComponent } from './iframe/iframe.component';
 import { SafePipe } from './pipe/safe.pipe';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { SelectComponent } from './select/select.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RouterModule } from '@angular/router';
 
@@ -42,11 +44,13 @@ const COMPONENTS = [SandouichComponent];
     SafePipe,
     NavLinkComponent,
     GalleryComponent,
+    SelectComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    NgSelectModule,
     RouterModule,
   ],
   exports: [
@@ -63,6 +67,8 @@ const COMPONENTS = [SandouichComponent];
     NavBurgerComponent,
     ModalComponent,
     IframeComponent,
+    TableComponent,
+    SelectComponent
     TableComponent,
     NavLinkComponent,
     TableComponent,
