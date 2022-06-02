@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {DpDatePickerModule} from 'ng2-date-picker';
+import { DatepickerModule } from 'ng2-datepicker';
 import { SandouichComponent } from './sandouich.component';
 import { CardComponent } from './card/card.component';
 import { TabGroupComponent } from './tab/tab-group/tab-group.component';
@@ -23,6 +23,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { SelectComponent } from './select/select.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RouterModule } from '@angular/router';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 
 const COMPONENTS = [
   SandouichComponent,
@@ -42,6 +43,7 @@ const COMPONENTS = [
   NavLinkComponent,
   GalleryComponent,
   SelectComponent,
+  DatepickerComponent
 ];
 
 @NgModule({
@@ -56,7 +58,7 @@ const COMPONENTS = [
     NgSelectModule,
     RouterModule,
     BrowserModule,
-    DpDatePickerModule,
+    DatepickerModule,
   ],
   exports: [
     ...COMPONENTS,
