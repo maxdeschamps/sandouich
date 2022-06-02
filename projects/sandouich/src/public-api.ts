@@ -22,5 +22,7 @@ export * from './lib/container/container.component';
 export * from './lib/modal/modal.component';
 export * from './lib/table/table.component';
 export * from './lib/iframe/iframe.component';
+export * from './lib/gallery/gallery.component';
+export * from './lib/select/select.component';
 
 export * from './lib/table/table.interfaces';

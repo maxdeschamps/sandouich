@@ -29,7 +29,7 @@ export class TableComponent  {
       const rowData :TableRow[]= []
       this.headers.forEach((header)=>{
         const currentRow = row.filter((x :any ) => x.headerName == header.name);
-        if(currentRow.length > 0){
+        if(currentRow.length){
           currentRow[0].headerLabel = header.label;
           rowData.push(currentRow[0]);
         }else{

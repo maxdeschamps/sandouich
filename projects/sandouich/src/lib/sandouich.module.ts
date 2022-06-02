@@ -19,54 +19,47 @@ import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './table/table.component';
 import { IframeComponent } from './iframe/iframe.component';
 import { SafePipe } from './pipe/safe.pipe';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { SelectComponent } from './select/select.component';
+import { GalleryComponent } from './gallery/gallery.component';
 import { RouterModule } from '@angular/router';
 
-const COMPONENTS = [SandouichComponent];
+const COMPONENTS = [
+  SandouichComponent,
+  CardComponent,
+  TabGroupComponent,
+  TabItemComponent,
+  ButtonComponent,
+  ListComponent,
+  ListItemComponent,
+  InputComponent,
+  ContainerComponent,
+  NavbarComponent,
+  NavBurgerComponent,
+  ModalComponent,
+  TableComponent,
+  IframeComponent,
+  NavLinkComponent,
+  GalleryComponent,
+  SelectComponent,
+];
 
 @NgModule({
   declarations: [
-    COMPONENTS,
-    SandouichComponent,
-    CardComponent,
-    TabGroupComponent,
-    TabItemComponent,
-    ButtonComponent,
-    ListComponent,
-    ListItemComponent,
-    InputComponent,
-    ContainerComponent,
-    NavbarComponent,
-    NavBurgerComponent,
-    ModalComponent,
-    TableComponent,
-    IframeComponent,
+    ...COMPONENTS,
     SafePipe,
-    NavLinkComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    NgSelectModule,
     RouterModule,
     BrowserModule,
     DpDatePickerModule,
   ],
   exports: [
-    SandouichComponent,
-    CardComponent,
-    TabGroupComponent,
-    TabItemComponent,
-    ButtonComponent,
-    ListComponent,
-    ListItemComponent,
-    InputComponent,
-    ContainerComponent,
-    NavbarComponent,
-    NavBurgerComponent,
-    ModalComponent,
-    IframeComponent,
-    TableComponent,
-    NavLinkComponent
+    ...COMPONENTS,
   ]
 })
 export class SandouichModule { }
