@@ -3,5 +3,6 @@
            bindLabel="name"
            bindValue="id"
             [formControl]="formValue"
+           (change)="onChange($event.id)"
 >
 </ng-select>
