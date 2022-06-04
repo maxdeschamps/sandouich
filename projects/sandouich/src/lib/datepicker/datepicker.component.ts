@@ -11,20 +11,7 @@ import locale from 'date-fns/locale/fr';
 export class DatepickerComponent implements OnInit {
 
   date = new Date();
-  // options sample with default values
-  options: DatepickerOptions = {
-    minYear: getYear(new Date()) - 15,
-    maxYear: getYear(new Date()) + 30,
-    placeholder: '',
-    format: 'dd LLLL yyyy',
-    formatTitle: 'LLLL yyyy',
-    formatDays: 'dd',
-    firstCalendarDay: 0,
-    locale: locale,
-    position: 'top',
-    inputClass: '',
-    calendarClass: 'datepicker-default',
-    scrollBarColor: '#dfe3e9',
+  datePickerConfig = {
   };
 
   constructor() { }

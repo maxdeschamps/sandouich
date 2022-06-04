@@ -24,6 +24,7 @@ import { SelectComponent } from './select/select.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RouterModule } from '@angular/router';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { DpDatePickerModule } from 'ng2-date-picker';
 
 const COMPONENTS = [
   SandouichComponent,
@@ -59,6 +60,7 @@ const COMPONENTS = [
     RouterModule,
     BrowserModule,
     DatepickerModule,
+    DpDatePickerModule,
   ],
   exports: [
     ...COMPONENTS,
