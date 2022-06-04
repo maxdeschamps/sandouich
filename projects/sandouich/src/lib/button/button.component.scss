@@ -1,0 +1,166 @@
+@import '../../../scss/variables';
+
+button {
+    border: none;
+    position: relative;
+    border-radius: map-get($border-radius, 'button');
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border: solid black 0.125rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: $transition;
+
+    .text {
+        color: map-get($text-color, 'button');
+        text-align: center;
+        font-size: map-get($font-size-desktop, 'button');
+        position: relative;
+        z-index: 2;
+    }
+
+    .background {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        background-color: rgba(255, 255, 255, .2);
+        z-index: 1;
+        transition: $transition;
+    }
+
+    @media screen and (max-width: 25.625rem) {
+        font-size: map-get($font-size-mobile, 'button');
+    }
+
+    background-color: map-get($bg-color, 'default');
+    border-color: map-get($bg-color, 'default');
+    &:hover {
+        background-color: darken(map-get($bg-color, 'default'), 10%);
+    }
+
+    &:active {
+        .background {
+            width: 100%;
+        }
+    }
+
+    &.secondary {
+        .text {
+            color: map-get($text-color, 'default');
+        }
+        &:hover {
+            border-color: map-get($bg-color, 'default');
+            background-color: map-get($bg-color, 'default');
+            .text {
+                color: map-get($bg-color, 'default');
+            }
+        }
+    }
+
+    &.info {
+        background-color: map-get($bg-color, 'info');
+        border-color: map-get($bg-color, 'info');
+        &:hover {
+            border-color: darken(map-get($bg-color, 'info'), 10%);
+            background-color: darken(map-get($bg-color, 'info'), 10%);
+        }
+
+        &.secondary {
+            .text {
+                color: map-get($text-color, 'info');
+            }
+            &:hover {
+                border-color: map-get($bg-color, 'info');
+                background-color: map-get($bg-color, 'info');
+                .text {
+                    color: map-get($bg-color, 'info');
+                }
+            }
+        }
+    }
+
+    &.success {
+        background-color: map-get($bg-color, 'success');
+        border-color: map-get($bg-color, 'success');
+        &:hover {
+            border-color: darken(map-get($bg-color, 'success'), 10%);
+            background-color: darken(map-get($bg-color, 'success'), 10%);
+        }
+
+        &.secondary {
+            .text {
+                color: map-get($text-color, 'success');
+            }
+            &:hover {
+                border-color: map-get($bg-color, 'success');
+                background-color: map-get($bg-color, 'success');
+                .text {
+                    color: map-get($bg-color, 'success');
+                }
+            }
+        }
+    }
+
+    &.warning {
+        background-color: map-get($bg-color, 'warning');
+        border-color: map-get($bg-color, 'warning');
+        &:hover {
+            border-color: darken(map-get($bg-color, 'warning'), 10%);
+            background-color: darken(map-get($bg-color, 'warning'), 10%);
+        }
+
+        &.secondary {
+            .text {
+                color: map-get($text-color, 'warning');
+            }
+            &:hover {
+                border-color: map-get($bg-color, 'warning');
+                background-color: map-get($bg-color, 'warning');
+                .text {
+                    color: map-get($bg-color, 'warning');
+                }
+            }
+        }
+    }
+
+    &.error {
+        background-color: map-get($bg-color, 'error');
+        border-color: map-get($bg-color, 'error');
+        &:hover {
+            border-color: darken(map-get($bg-color, 'error'), 10%);
+            background-color: darken(map-get($bg-color, 'error'), 10%);
+        }
+
+        &.secondary {
+            .text {
+                color: map-get($text-color, 'error');
+            }
+            &:hover {
+                border-color: map-get($bg-color, 'error');
+                background-color: map-get($bg-color, 'error');
+                .text {
+                    color: map-get($bg-color, 'error');
+                }
+            }
+        }
+    }
+
+    &.secondary {
+        background-color: transparent;
+        &:hover {
+            .text {
+                color: map-get($text-color, 'button') !important;
+            }
+        }
+    }
+
+    &.round {
+        border-radius: 62.5rem;
+        .background {
+            border-radius: 62.5rem;
+        }
+    }
+}

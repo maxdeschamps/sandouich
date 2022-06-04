@@ -1,0 +1,124 @@
+<sand-navbar navbarTitle="Sandouich library">
+  <sand-nav-link>Home</sand-nav-link>
+  <sand-nav-link>About us</sand-nav-link>
+  <sand-nav-link>Users</sand-nav-link>
+</sand-navbar>
+
+<sand-container>
+
+  <h2>Iframe</h2>
+  <sand-iframe
+    [id]="idFrame"
+    [title]="titleIFrame"
+    [width]="widthIFrame"
+    [height]="heightIFrame"
+    [src]="src"
+    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    >
+  </sand-iframe>
+
+  <h2>Buttons</h2>
+  <sand-button class="info">Info</sand-button>
+  <sand-button class="success">Success</sand-button>
+  <sand-button class="warning">Warning</sand-button>
+  <sand-button class="error">Error</sand-button>
+  <sand-button class="wrong">Wrong</sand-button>
+  <sand-button>Rien</sand-button>
+
+  <sand-button class="info" [secondary]="true">Info</sand-button>
+  <sand-button class="success" [secondary]="true">Success</sand-button>
+  <sand-button class="warning" [secondary]="true">Warning</sand-button>
+  <sand-button class="error" [secondary]="true">Error</sand-button>
+  <sand-button class="wrong" [secondary]="true">Wrong</sand-button>
+  <sand-button [secondary]="true">Rien</sand-button>
+
+  <sand-button class="info" [round]="true">Info</sand-button>
+  <sand-button class="success" [round]="true">Success</sand-button>
+  <sand-button class="warning" [round]="true">Warning</sand-button>
+  <sand-button class="error" [round]="true">Error</sand-button>
+  <sand-button class="wrong" [round]="true">Wrong</sand-button>
+  <sand-button [round]="true">Rien</sand-button>
+
+  <sand-button class="info" [secondary]="true" [round]="true">Info</sand-button>
+  <sand-button class="success" [secondary]="true" [round]="true">Success</sand-button>
+  <sand-button class="warning" [secondary]="true" [round]="true">Warning</sand-button>
+  <sand-button class="error" [secondary]="true" [round]="true">Error</sand-button>
+  <sand-button class="wrong" [secondary]="true" [round]="true">Wrong</sand-button>
+  <sand-button [secondary]="true" [round]="true">Rien</sand-button>
+
+  <h2>Card</h2>
+  <h3>Card with content</h3>
+  <sand-card [displayHeader]="true" [displayBody]="true" [displayFooter]="true">
+    <div header>
+      Titre
+    </div>
+    <div content>
+      Contenu
+    </div>
+    <div footer>
+      Footer
+    </div>
+  </sand-card>
+
+  <h3>Card with image</h3>
+  <sand-card [displayHeader]="true" [displayBody]="true" src="https://www.woopets.fr/assets/races/000/206/og-image/griffon-bruxellois_2.jpg">
+    <div header>
+      Titre
+    </div>
+  </sand-card>
+
+  <h2>Tabs</h2>
+  <sand-tab-group>
+    <sand-tab-item label="Menu">
+      <p>ici c'est paris</p>
+    </sand-tab-item>
+    <sand-tab-item label="Burger">
+      <p>ici c'est pas riz</p>
+    </sand-tab-item>
+  </sand-tab-group>
+
+  <h2>Lists</h2>
+  <h3>List without dots</h3>
+  <sand-list>
+    <sand-list-item>Petit 1</sand-list-item>
+    <sand-list-item>Petit 2</sand-list-item>
+    <sand-list-item>Petit pied</sand-list-item>
+  </sand-list>
+
+  <h3>List with dots</h3>
+  <sand-list [listed]="true">
+    <sand-list-item>Petit 1</sand-list-item>
+    <sand-list-item>Petit 2</sand-list-item>
+    <sand-list-item>Petit pied</sand-list-item>
+  </sand-list>
+
+  <h2>Modal</h2>
+  <sand-modal *ngIf="displayed">
+    <div title>
+      Titre
+    </div>
+    <div detail>
+      Mon contenu
+    </div>
+    <div action>
+      <sand-button>Valider</sand-button>
+    </div>
+  </sand-modal>
+
+  <button (click)="openModal()">Open Modal</button>
+
+  <h2>Table</h2>
+  <sand-table [headers]="headers" [data]="datadatatable" (clickLineEvent)="getLineClicked($event)"></sand-table>
+
+  <h2>Input</h2>
+  <sand-input label="Votre nom" type="text" [formValue]="hours"></sand-input>
+
+  <h2>Select</h2>
+  <sand-select [formValue]="selectedProject" [arrayItems]="projects"></sand-select>
+
+  <h2>Datepicker</h2>
+  <sand-datepicker label="Date"></sand-datepicker>
+
+
+</sand-container>
+

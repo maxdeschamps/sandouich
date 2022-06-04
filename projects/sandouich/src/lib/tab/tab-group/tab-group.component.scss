@@ -1,0 +1,20 @@
+@import "../../../../scss/variables";
+
+.lib-sandouich-tab-group {
+  list-style: none;
+  display: flex;
+  padding: 1.25rem 0 0px 0px;
+}
+
+.lib-sandouich-tab-item {
+  margin-right: 1.563rem;
+  cursor: pointer;
+}
+
+.selected {
+  font-weight: bold;
+  color: cadetblue;
+  border-bottom: 0.125rem solid cadetblue;
+}
+
+

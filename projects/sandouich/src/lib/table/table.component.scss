@@ -1,0 +1,75 @@
+@import '../../../scss/variables.scss';
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.primary {
+  background-color: map-get($color, 'default');
+  color : white;
+}
+.secondary{
+  background-color: map-get($color, 'info');
+  color : white;
+
+}
+
+
+.responsive-table {
+  li {
+    border-radius: 0.19rem;
+    padding: 1.5rem 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .table-header {
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    transition: all .2s ease-in-out;
+  }
+  .table-row:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  .col {
+    flex-basis: 25%;
+    text-align: center;
+  }
+
+
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    li {
+      display: block;
+    }
+    .col {
+      flex-basis: 100%;
+
+    }
+    .col {
+      display: flex;
+      padding: 0.6rem 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 0.6rem;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}

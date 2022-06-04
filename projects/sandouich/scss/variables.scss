@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+
+// Colors
+$color: (
+  'success': #15803d,
+  'info': #1d4ed8,
+  'warning': #a16207,
+  'error': #b91c1c,
+  'border': #d1d5db,
+  'border:hover': #262626,
+  'grey1': #4b5563,
+  'grey2': #9ca3af,
+  'grey3': #e5e7eb,
+  'default': #262626,
+);
+
+$bg-color: (
+  'success': map-get($color, 'success'),
+  'info': map-get($color, 'info'),
+  'warning': map-get($color, 'warning'),
+  'error': map-get($color, 'error'),
+  'grey1': map-get($color, 'grey1'),
+  'grey2': map-get($color, 'grey2'),
+  'grey3': map-get($color, 'grey3'),
+  'default': map-get($color, 'default'),
+);
+
+$text-color: (
+  'success': map-get($color, 'success'),
+  'info': map-get($color, 'info'),
+  'warning': map-get($color, 'warning'),
+  'error': map-get($color, 'error'),
+  'grey1': map-get($color, 'grey1'),
+  'grey2': map-get($color, 'grey2'),
+  'grey3': map-get($color, 'grey3'),
+  'title': #171717,
+  'default': #262626,
+  'button': #f8fafc
+);
+
+// Font
+$font-size-desktop: (
+  'default': 0.8rem,
+  'button': 1rem,
+  'input': 1rem,
+  'h1': 3rem,
+  'h2': 2rem,
+  'h3': 1.3rem,
+  'h4': 1.1rem,
+  'nav': 0.8rem,
+  'header': 0.9rem,
+  'footer': 0.6rem,
+);
+
+$font-size-mobile: (
+  'default': 0.8rem,
+  'button': 1rem,
+  'input': 1rem,
+  'h1': 2rem,
+  'h2': 1.6rem,
+  'h3': 1.3rem,
+  'h4': 1rem,
+  'nav': 0.8rem,
+  'header': 0.9rem,
+  'footer': 0.6rem,
+);
+
+$font-weight: (
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+);
+
+// Transition
+$transition: all .2s ease;
+
+// Border radius
+$border-radius: (
+  'button': 0.3rem
+);
+
+// Init
+html {
+  font-size: 100%;
+}
+
+// Content
+*,
+p,
+.p {
+  font-family: 'Lato', sans-serif;
+  font-weight: map-get($font-weight, 'regular');
+  color: map-get($text-color, 'default');
+  font-size: map-get($font-size-desktop, 'default');
+
+  @media screen and (max-width: 410px) {
+    font-size: map-get($font-size-mobile, 'default');
+  }
+}
+
+h1,
+.h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: map-get($font-weight, 'bold');
+  color: map-get($text-color, 'title');
+  font-size: map-get($font-size-desktop, 'h1');
+
+  @media screen and (max-width: 410px) {
+    font-size: map-get($font-size-mobile, 'h1');
+  }
+}
+
+h2,
+.h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: map-get($font-weight, 'bold');
+  color: map-get($text-color, 'title');
+  font-size: map-get($font-size-desktop, 'h2');
+
+  @media screen and (max-width: 410px) {
+    font-size: map-get($font-size-mobile, 'h2');
+  }
+}
+
+h3,
+.h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: map-get($font-weight, 'semibold');
+  color: map-get($text-color, 'title');
+  font-size: map-get($font-size-desktop, 'h3');
+
+  @media screen and (max-width: 410px) {
+    font-size: map-get($font-size-mobile, 'h3');
+  }
+}
+
+h4,
+.h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: map-get($font-weight, 'medium');
+  color: map-get($text-color, 'title');
+  font-size: map-get($font-size-desktop, 'h4');
+
+  @media screen and (max-width: 410px) {
+    font-size: map-get($font-size-mobile, 'h4');
+  }
+}
+
+label,
+.label {
+  display: block;
+  font-size: map-get($font-size-desktop, 'input');
+  font-weight: map-get($font-weight, 'regular');
+  @media screen and (max-width: 410px) {
+    font-size: map-get($font-size-mobile, 'input');
+  }
+}
+
+input,
+.input,
+.dp-material input {
+  width: 100%;
+  padding: 0.55rem 1.25rem;
+  margin: 0.3rem 0;
+  display: inline-block;
+  border: 0.06rem solid map-get($color, 'border');
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  font-size: map-get($font-size-desktop, 'input');
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border: 0.06rem solid map-get($color, 'border:hover');
+    outline: none;
+  }
+
+  @media screen and (max-width: 410px) {
+    font-size: map-get($font-size-mobile, 'input');
+  }
+}
