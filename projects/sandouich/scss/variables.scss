@@ -3,14 +3,14 @@
 
 // Colors
 $color: (
-    'success': #43F058,
-    'info': #46B0FA,
-    'warning': #EBC634,
-    'error': #CF6042,
-    'border': #777780,
-    'grey1': #424146,
-    'grey2': #777780,
-    'grey3': #D7D6E6,
+    'success': #15803d,
+    'info': #1d4ed8,
+    'warning': #a16207,
+    'error': #b91c1c,
+    'border': #d1d5db,
+    'grey1': #4b5563,
+    'grey2': #9ca3af,
+    'grey3': #e5e7eb,
     'default': #262626,
 );
 
@@ -33,9 +33,9 @@ $text-color: (
     'grey1': map-get($color, 'grey1'),
     'grey2': map-get($color, 'grey2'),
     'grey3': map-get($color, 'grey3'),
-    'title': #262626,
-    'default': #363636,
-    'button': #fafafa
+    'title': #171717,
+    'default': #262626,
+    'button': #f8fafc
 );
 
 // Font
