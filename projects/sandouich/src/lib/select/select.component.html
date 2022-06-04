@@ -1,8 +1,8 @@
 <!--Using items input-->
-<ng-select [items]="arrayItems"
-           bindLabel="name"
-           bindValue="id"
-            [formControl]="formValue"
-           (change)="onChange($event.id)"
->
+<ng-select 
+  [items]="arrayItems"
+  bindLabel="name"
+  bindValue="id"
+  [formControl]="formValue"
+  (change)="onChange($event.id)">
 </ng-select>
