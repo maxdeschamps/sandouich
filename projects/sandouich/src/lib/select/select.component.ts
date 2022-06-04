@@ -14,6 +14,11 @@ export class SelectComponent implements OnInit {
 
   @Input() arrayItems: any;
 
+  @Output() event: EventEmitter<number> = new EventEmitter<number>();
+
+  onChange(idSelected: number){
+    this.event.emit(idSelected);
+  }
 
   ngOnInit(): void {
   }
