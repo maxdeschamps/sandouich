@@ -27,7 +27,6 @@ export type ChartOptions = {
   chart: ApexChart;
   dataLabels: ApexDataLabels;
   fill: ApexFill;
-  forecastDataPoints: ApexForecastDataPoints;
   grid: ApexGrid;
   legend: ApexLegend;
   markers: ApexMarkers;
@@ -60,9 +59,7 @@ export class StatsComponent implements OnInit {
     colors: null,
     dataLabels: null,
     fill: null,
-    forecastDataPoints: null,
     grid: null,
-    label: null,
     legend: null,
     markers: null,
     noData: null,
