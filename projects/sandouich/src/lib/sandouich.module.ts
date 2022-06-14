@@ -25,6 +25,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { RouterModule } from '@angular/router';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { DpDatePickerModule } from 'ng2-date-picker';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { StatsComponent } from './stats/stats.component';
 
 const COMPONENTS = [
   SandouichComponent,
@@ -44,7 +46,8 @@ const COMPONENTS = [
   NavLinkComponent,
   GalleryComponent,
   SelectComponent,
-  DatepickerComponent
+  DatepickerComponent,
+  StatsComponent
 ];
 
 @NgModule({
@@ -61,6 +64,7 @@ const COMPONENTS = [
     BrowserModule,
     DatepickerModule,
     DpDatePickerModule,
+    NgApexchartsModule,
   ],
   exports: [
     ...COMPONENTS,
