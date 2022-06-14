@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ModalService} from "../service/modal.service";
 import {TableHeader, TableRow} from "../table/table.interfaces";
 import {FormControl} from "@angular/forms";
+import { IDatePickerConfig } from "ng2-date-picker";
 
 @Component({
   selector: 'sand-gallery',
@@ -54,6 +55,25 @@ export class GalleryComponent implements OnInit {
     ]
   ];
 
+  chartOpt = {
+    chart: {
+      height: 350,
+      type: "bar"
+    },
+    series: [
+      {
+        name: "Donnée de test",
+        data: [10, 20, 35, 15, 40, 12, 53]
+      }
+    ],
+    title: {
+      text: "Statistiques de la semaine"
+    },
+    xaxis: {
+      categories: ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
+    },
+  };
+
   selectedProject = new FormControl();
 
   projects = [
@@ -63,7 +83,20 @@ export class GalleryComponent implements OnInit {
     { id: 4, name: 'ERP' },
   ];
 
+  datepickerDateConfig = <IDatePickerConfig>{
+    locale: "fr",
+    format: "DD/MM/YYYY",
+    monthFormat: "MMMM, YYYY",
+    firstDayOfWeek: "mo",
+    disableKeypress: true
+  }
 
+  datepickerTimeConfig = <IDatePickerConfig>{
+    locale: "fr",
+    format: "HH:mm",
+    showTwentyFourHours: true,
+    disableKeypress: true
+  }
 
   constructor(public modalService: ModalService) {
   }

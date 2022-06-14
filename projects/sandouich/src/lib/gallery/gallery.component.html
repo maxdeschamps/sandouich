@@ -117,7 +117,13 @@
   <sand-select [formValue]="selectedProject" [arrayItems]="projects"></sand-select>
 
   <h2>Datepicker</h2>
-  <sand-datepicker label="Date"></sand-datepicker>
+  <sand-datepicker label="Date avec heure"></sand-datepicker>
+  <sand-datepicker label="Date" mode="day" [datePickerConfig]="datepickerDateConfig"></sand-datepicker>
+  <sand-datepicker label="Heure" mode="time" [datePickerConfig]="datepickerTimeConfig"></sand-datepicker>
+
+  <h2>Stats</h2>
+  <sand-stats></sand-stats>
+  <sand-stats [chartOptions]="chartOpt"></sand-stats>
 
 
 </sand-container>

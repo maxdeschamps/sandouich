@@ -25,5 +25,6 @@ export * from './lib/iframe/iframe.component';
 export * from './lib/gallery/gallery.component';
 export * from './lib/select/select.component';
 export * from './lib/datepicker/datepicker.component';
+export * from './lib/stats/stats.component';
 
 export * from './lib/table/table.interfaces';
