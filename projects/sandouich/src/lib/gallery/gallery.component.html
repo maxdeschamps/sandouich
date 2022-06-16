@@ -45,6 +45,10 @@
   <sand-button class="error" [secondary]="true" [round]="true">Error</sand-button>
   <sand-button class="wrong" [secondary]="true" [round]="true">Wrong</sand-button>
   <sand-button [secondary]="true" [round]="true">Rien</sand-button>
+  
+  <sand-button class="info" id="5" (clickButtonEvent)="getClickButton($event)">event id: 5</sand-button>
+  <sand-button class="info" id="test" (clickButtonEvent)="getClickButton($event)">event id: test</sand-button>
+
 
   <h2>Card</h2>
   <h3>Card with content default</h3>

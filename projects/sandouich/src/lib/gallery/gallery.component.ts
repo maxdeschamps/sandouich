@@ -157,6 +157,10 @@ export class GalleryComponent implements OnInit {
     this.modalService.enable();
   }
 
+  getClickButton(event :number|string){
+    console.log(event);
+  }
+
   getLineClicked(event :any){
     console.log(event);
   }
