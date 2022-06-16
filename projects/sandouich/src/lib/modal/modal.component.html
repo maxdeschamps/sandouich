@@ -1,11 +1,8 @@
-<div *ngIf="display" class="lib-sandouich-modal">
+<div *ngIf="display" class="lib-sandouich-modal" [ngClass]="color">
   <div class="lib-sandouich-modal-title">
     <ng-content select="[title]"></ng-content>
   </div>
   <div class="lib-sandouich-modal-detail">
-
-
-
     <ng-content select="[detail]"></ng-content>
   </div>
   <div class="lib-sandouich-modal-action">

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Input } from '@angular/core';
 import {Subject, takeUntil} from "rxjs";
 import {ModalService} from "../service/modal.service";
 
@@ -7,7 +7,10 @@ import {ModalService} from "../service/modal.service";
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
+
 export class ModalComponent implements OnInit, OnDestroy {
+  @Input() color :string = "";
+
   display: boolean = false;
   unsub: Subject<boolean> = new Subject<boolean>();
 
@@ -22,5 +25,4 @@ export class ModalComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.unsub.next(true);
   }
-
 }
