@@ -1,74 +1,199 @@
 @import '../../../scss/variables.scss';
 
-.container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-}
-
-.primary {
-  background-color: map-get($color, 'default');
-  color : white;
-}
-.secondary{
-  background-color: map-get($color, 'info');
-  color : white;
-
-}
-
-
 .responsive-table {
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  padding: 0;
+
   li {
-    border-radius: 0.19rem;
     padding: 1.5rem 1.8rem;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.5rem;
+    transition: all .2s ease-in-out;
+    color: map-get($text-color, 'default');
+    &.table-row {
+      &:nth-child(odd) {
+        background-color: map-get($bg-color, 'grey3');
+      }
+    
+      &:nth-child(even) {
+        background-color: map-get($bg-color, 'grey2');
+      }
+
+      &:hover {
+        background-color: map-get($bg-color, 'grey1');
+      }
+
+      &:active {
+        background-color: map-get($bg-color, 'default');
+        .col.text {
+          color: map-get($text-color, 'default-white');
+        }
+      }
+    }
   }
+
   .table-header {
-    border-radius: 0.6rem;
+    background-color: map-get($bg-color, 'default');
+
+    .col.title {
+      color: map-get($text-color, 'default-white');
+    }
+  }
+
+  &.primary,
+  &.success {
+    li.table-row {
+      &:nth-child(odd) {
+        background-color: lighten(map-get($bg-color, 'success'), 62%);
+      }
+    
+      &:nth-child(even) {
+        background-color: lighten(map-get($bg-color, 'success'), 52%);
+      }
+
+      &:hover {
+        background-color: lighten(map-get($bg-color, 'success'), 35%);
+      }
+
+      &:active {
+        background-color: map-get($bg-color, 'success');
+      }
+    }
+
+    .table-header {
+      background-color: map-get($bg-color, 'success');
+    }
+  }
+
+  &.secondary,
+  &.info {
+    li.table-row {
+      &:nth-child(odd) {
+        background-color: lighten(map-get($bg-color, 'info'), 46%);
+      }
+
+      &:nth-child(even) {
+        background-color: lighten(map-get($bg-color, 'info'), 36%);
+      }
+
+      &:hover {
+        background-color: lighten(map-get($bg-color, 'info'), 26%);
+      }
+
+      &:active {
+        background-color: map-get($bg-color, 'info');
+      }
+    }
+
+    .table-header {
+      background-color: map-get($bg-color, 'info');
+    }
+  }
+
+  &.warning {
+    li.table-row {
+      &:nth-child(odd) {
+        background-color: lighten(map-get($bg-color, 'warning'), 50%);
+      }
+    
+      &:nth-child(even) {
+        background-color: lighten(map-get($bg-color, 'warning'), 36%);
+      }
+
+      &:hover {
+        background-color: lighten(map-get($bg-color, 'warning'), 26%);
+      }
+
+      &:active {
+        background-color: map-get($bg-color, 'warning');
+      }
+    }
+
+    .table-header {
+      background-color: map-get($bg-color, 'warning');
+    }
+  }
+
+  &.error {
+    li.table-row {
+      &:nth-child(odd) {
+        background-color: lighten(map-get($bg-color, 'error'), 46%);
+      }
+    
+      &:nth-child(even) {
+        background-color: lighten(map-get($bg-color, 'error'), 36%);
+      }
+  
+      &:hover {
+        background-color: lighten(map-get($bg-color, 'error'), 26%);
+      }
+  
+      &:active {
+        background-color: map-get($bg-color, 'error');
+      }
+    }
+
+    .table-header {
+      background-color: map-get($bg-color, 'error');
+    }
+  }
+
+  .table-header {
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.03em;
   }
-  .table-row {
-    background-color: #ffffff;
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-    transition: all .2s ease-in-out;
-  }
+
   .table-row:hover {
-    transform: scale(1.05);
     cursor: pointer;
   }
+
   .col {
     flex-basis: 25%;
     text-align: center;
   }
 
-
   @media all and (max-width: 767px) {
+    border-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
     .table-header {
       display: none;
     }
+
     li {
       display: block;
     }
+
     .col {
       flex-basis: 100%;
 
     }
-    .col {
-      display: flex;
-      padding: 0.6rem 0;
-      &:before {
-        color: #6C7A89;
-        padding-right: 0.6rem;
-        content: attr(data-label);
-        flex-basis: 50%;
-        text-align: right;
+    .table-row {
+      .col {
+        display: flex;
+        padding: 0.6rem 0;
+        &:before {
+          color: map-get($text-color, 'grey1');
+          padding-right: 0.6rem;
+          content: attr(data-label);
+          flex-basis: 50%;
+          text-align: right;
+          transition: all .2s ease-in-out;
+        }
+      }
+      
+      &:active {
+        .col {
+          &:before {
+            color: map-get($text-color, 'default-white');
+          }
+        }
       }
     }
   }
