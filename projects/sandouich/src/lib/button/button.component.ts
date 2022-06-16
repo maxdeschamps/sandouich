@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'sand-button',
@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
   @Input() class?: string = "default";
+  @Input() id: number|string = "";
   @Input() round: boolean = false;
   @Input() secondary: boolean = false;
 
@@ -22,4 +23,11 @@ export class ButtonComponent implements OnInit {
     }
   }
 
+  @Output() clickButtonEvent = new EventEmitter<number|string>();
+
+  onClickButton(id:number|string){
+    if (id !== "") {
+      this.clickButtonEvent.emit(id);
+    }
+  }
 }

@@ -1,4 +1,4 @@
-<ul class="lib-sandouich-tab-group">
+<ul class="lib-sandouich-tab-group" [ngClass]="color">
   <li class="lib-sandouich-tab-item" *ngFor="let tab of tabs" (click)="selectTab(tab)" [ngClass]="{'selected':tab.active}">
     {{ tab.label }}
   </li>

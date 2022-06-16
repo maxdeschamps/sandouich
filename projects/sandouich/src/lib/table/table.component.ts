@@ -45,7 +45,7 @@ export class TableComponent  {
     this._data = value;
   }
 
-  @Input() color :string = "primary";
+  @Input() color :string = "";
 
   @Output() clickLineEvent = new EventEmitter<any>();
 

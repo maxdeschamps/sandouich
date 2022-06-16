@@ -45,12 +45,58 @@ export class GalleryComponent implements OnInit {
   datadatatable : TableRow[][] = [
     [
       {
+        headerName : 'status',
+        value : 'terminé'
+      },
+      {
         headerName : 'id',
         value : '1'
       },
       {
         headerName : 'name',
-        value : 'name 1'
+        value : 'Style'
+      }
+    ],
+    [
+      {
+        headerName : 'status',
+        value : 'terminé'
+      },
+      {
+        headerName : 'id',
+        value : '2'
+      },
+      {
+        headerName : 'name',
+        value : 'Composant Datepicker'
+      }
+    ],
+    [
+      {
+        headerName : 'status',
+        value : 'en cours'
+      },
+      {
+        headerName : 'id',
+        value : '3'
+      },
+      {
+        headerName : 'name',
+        value : 'Composant Chart'
+      }
+    ],
+    [
+      {
+        headerName : 'status',
+        value : 'en attente'
+      },
+      {
+        headerName : 'id',
+        value : '4'
+      },
+      {
+        headerName : 'name',
+        value : 'Composant tableau'
       }
     ]
   ];
@@ -109,6 +155,10 @@ export class GalleryComponent implements OnInit {
 
   openModal() {
     this.modalService.enable();
+  }
+
+  getClickButton(event :number|string){
+    console.log(event);
   }
 
   getLineClicked(event :any){

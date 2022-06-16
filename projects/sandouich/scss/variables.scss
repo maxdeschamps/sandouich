@@ -4,16 +4,17 @@
 
 // Colors
 $color: (
-  'success': #15803d,
-  'info': #1d4ed8,
-  'warning': #a16207,
-  'error': #b91c1c,
+  'success': #65a30d,
+  'info': #2563eb,
+  'warning': #d97706,
+  'error': #dc2626,
   'border': #d1d5db,
   'border:hover': #262626,
-  'grey1': #4b5563,
-  'grey2': #9ca3af,
-  'grey3': #e5e7eb,
+  'grey1': #9ca3af,
+  'grey2': #e5e7eb,
+  'grey3': #f9fafb,
   'default': #262626,
+  'default-white': #f4f4f4,
 );
 
 $bg-color: (
@@ -25,6 +26,7 @@ $bg-color: (
   'grey2': map-get($color, 'grey2'),
   'grey3': map-get($color, 'grey3'),
   'default': map-get($color, 'default'),
+  'default-white': map-get($color, 'default-white'),
 );
 
 $text-color: (
@@ -35,6 +37,7 @@ $text-color: (
   'grey1': map-get($color, 'grey1'),
   'grey2': map-get($color, 'grey2'),
   'grey3': map-get($color, 'grey3'),
+  'default-white': map-get($color, 'default-white'),
   'title': #171717,
   'default': #262626,
   'button': #f8fafc
