@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {TabItemComponent} from "../tab-item/tab-item.component";
 
 @Component({
@@ -7,7 +7,7 @@ import {TabItemComponent} from "../tab-item/tab-item.component";
   styleUrls: ['./tab-group.component.scss']
 })
 export class TabGroupComponent implements OnInit {
-
+  @Input() color: string = "";
   tabs: TabItemComponent[] = []
 
   constructor() { }

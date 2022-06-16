@@ -4,17 +4,61 @@
   list-style: none;
   display: flex;
   padding: 1.25rem 0 0px 0px;
+
+  .lib-sandouich-tab-item {
+    margin-right: 1.563rem;
+    cursor: pointer;
+  }
+
+  li {
+    font-weight: bold;
+    color: map-get($text-color, 'grey1');
+    border-bottom: 0.125rem solid transparent;
+    
+    &.selected {
+      color: map-get($text-color, 'default');
+      border-color: map-get($bg-color, 'default');
+    }
+  }
+
+  &.success {
+    li {
+      &.selected {
+        color: map-get($text-color, 'success');
+        border-color: map-get($bg-color, 'success');
+      }
+    }
+  }
+
+  &.info {
+    li {
+      &.selected {
+        color: map-get($text-color, 'info');
+        border-color: map-get($bg-color, 'info');
+      }
+    }
+  }
+
+  &.warning {
+    li {
+      &.selected {
+        color: map-get($text-color, 'warning');
+        border-color: map-get($bg-color, 'warning');
+      }
+    }
+  }
+
+  &.error {
+    li {
+      &.selected {
+        color: map-get($text-color, 'error');
+        border-color: map-get($bg-color, 'error');
+      }
+    }
+  }
+  
 }
 
-.lib-sandouich-tab-item {
-  margin-right: 1.563rem;
-  cursor: pointer;
-}
 
-.selected {
-  font-weight: bold;
-  color: cadetblue;
-  border-bottom: 0.125rem solid cadetblue;
-}
 
 
