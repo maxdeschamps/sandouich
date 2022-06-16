@@ -1,4 +1,4 @@
-import {AfterContentInit, AfterViewInit, Component, ContentChild, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import {AfterContentInit, AfterViewInit, ViewEncapsulation, Component, ContentChild, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'sand-card',
@@ -11,6 +11,7 @@ export class CardComponent implements OnInit {
   @Input() displayFooter: boolean = false;
 
   @Input() src?: string = '';
+  @Input() color: string = '';
 
   constructor() { }
 

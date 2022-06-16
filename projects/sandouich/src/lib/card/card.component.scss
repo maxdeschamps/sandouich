@@ -1,38 +1,99 @@
 @import "../../../scss/variables";
 
 .lib-sandouich-card {
-  width: calc(100% - 0.125rem);
-  border-radius: .25rem;
-
-  box-shadow: 0.125rem 0.125rem 0.25rem #00000075;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0.125rem 0.125rem 0.25rem map-get($color, 'grey2');
   background: map-get($bg-color, grey3);
 
-  > .lib-sandouich-card- {
-    &header {
-      padding: 0.625rem 0.5rem;
-      border-radius: .25rem .25rem 0 0;
+  .lib-sandouich-card-header {
+    padding: 1.5rem 1.8rem;
+    background-color: map-get($bg-color, 'default');
+  }
 
-      background: map-get($bg-color, primary);
-      color: white;
-    }
-    &body {
-      padding: 0.625rem;
-      display: flex;
+  .lib-sandouich-card-body {
+    padding: 0.625rem;
+    display: flex;
+    border: 0.063rem solid map-get($color, 'border');
+    border-left: 0;
+    border-right: 0;
+    background: map-get($bg-color, 'grey3');
 
-      border: 0.063rem solid map-get($bg-color, grey2);
-      border-left: 0;
-      border-right: 0;
-      background: white;
-
-      img {
-        border-radius: .25rem;
-        width: 100%;
-        margin: auto;
-      }
-    }
-    &footer {
-      padding: 0.625rem 0.5rem;
-      border-radius: 0 0 .25rem .25rem;
+    img {
+      border-radius: .25rem;
+      width: 100%;
+      margin: auto;
     }
   }
+
+  .lib-sandouich-card-footer {
+    padding: 0.625rem 0.5rem;
+    border-radius: 0 0 .25rem .25rem;
+    background: map-get($bg-color, 'grey2');
+  }
+
+  &.success {
+    .lib-sandouich-card-header {
+      background-color: map-get($bg-color, 'success');
+    }
+  
+    .lib-sandouich-card-body {
+      background-color: lighten(map-get($bg-color, 'success'), 62%);
+    }
+  
+    .lib-sandouich-card-footer {
+      background-color: lighten(map-get($bg-color, 'success'), 52%);
+    }
+  }
+
+  &.info {
+    .lib-sandouich-card-header {
+      background-color: map-get($bg-color, 'info');
+    }
+  
+    .lib-sandouich-card-body {
+      background-color: lighten(map-get($bg-color, 'info'), 46%);
+    }
+  
+    .lib-sandouich-card-footer {
+      background-color: lighten(map-get($bg-color, 'info'), 36%);
+    }
+  }
+
+  &.warning {
+    .lib-sandouich-card-header {
+      background-color: map-get($bg-color, 'warning');
+    }
+  
+    .lib-sandouich-card-body {
+      background-color: lighten(map-get($bg-color, 'warning'), 50%);
+    }
+  
+    .lib-sandouich-card-footer {
+      background-color: lighten(map-get($bg-color, 'warning'), 36%);
+    }
+  }
+
+  &.error {
+    .lib-sandouich-card-header {
+      background-color: map-get($bg-color, 'error');
+    }
+  
+    .lib-sandouich-card-body {
+      background-color: lighten(map-get($bg-color, 'error'), 46%);
+    }
+  
+    .lib-sandouich-card-footer {
+      background-color: lighten(map-get($bg-color, 'error'), 36%);
+    }
+  }
+
+  @media all and (max-width: 767px) {
+    border-radius: 0.5rem;
+  }
+}
+
+:host ::ng-deep [header] {
+  color: map-get($text-color, 'default-white');
 }
