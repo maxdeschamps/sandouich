@@ -47,8 +47,60 @@
   <sand-button [secondary]="true" [round]="true">Rien</sand-button>
 
   <h2>Card</h2>
-  <h3>Card with content</h3>
+  <h3>Card with content default</h3>
   <sand-card [displayHeader]="true" [displayBody]="true" [displayFooter]="true">
+    <div header class="h3">
+      Titre
+    </div>
+    <div content>
+      Contenu
+    </div>
+    <div footer>
+      Footer
+    </div>
+  </sand-card>
+
+  <h3>Card with content success</h3>
+  <sand-card [displayHeader]="true" [displayBody]="true" [displayFooter]="true" color="success">
+    <div header>
+      Titre
+    </div>
+    <div content>
+      Contenu
+    </div>
+    <div footer>
+      Footer
+    </div>
+  </sand-card>
+
+  <h3>Card with content info</h3>
+  <sand-card [displayHeader]="true" [displayBody]="true" [displayFooter]="true" color="info">
+    <div header>
+      Titre
+    </div>
+    <div content>
+      Contenu
+    </div>
+    <div footer>
+      Footer
+    </div>
+  </sand-card>
+
+  <h3>Card with content warning</h3>
+  <sand-card [displayHeader]="true" [displayBody]="true" [displayFooter]="true" color="warning">
+    <div header>
+      Titre
+    </div>
+    <div content>
+      Contenu
+    </div>
+    <div footer>
+      Footer
+    </div>
+  </sand-card>
+
+  <h3>Card with content error</h3>
+  <sand-card [displayHeader]="true" [displayBody]="true" [displayFooter]="true" color="error">
     <div header>
       Titre
     </div>
@@ -77,6 +129,42 @@
     </sand-tab-item>
   </sand-tab-group>
 
+  <sand-tab-group color="success">
+    <sand-tab-item label="Menu">
+      <p>ici c'est paris</p>
+    </sand-tab-item>
+    <sand-tab-item label="Burger">
+      <p>ici c'est pas riz</p>
+    </sand-tab-item>
+  </sand-tab-group>
+
+  <sand-tab-group color="info">
+    <sand-tab-item label="Menu">
+      <p>ici c'est paris</p>
+    </sand-tab-item>
+    <sand-tab-item label="Burger">
+      <p>ici c'est pas riz</p>
+    </sand-tab-item>
+  </sand-tab-group>
+
+  <sand-tab-group color="warning">
+    <sand-tab-item label="Menu">
+      <p>ici c'est paris</p>
+    </sand-tab-item>
+    <sand-tab-item label="Burger">
+      <p>ici c'est pas riz</p>
+    </sand-tab-item>
+  </sand-tab-group>
+
+  <sand-tab-group color="error">
+    <sand-tab-item label="Menu">
+      <p>ici c'est paris</p>
+    </sand-tab-item>
+    <sand-tab-item label="Burger">
+      <p>ici c'est pas riz</p>
+    </sand-tab-item>
+  </sand-tab-group>
+
   <h2>Lists</h2>
   <h3>List without dots</h3>
   <sand-list>
@@ -93,7 +181,7 @@
   </sand-list>
 
   <h2>Modal</h2>
-  <sand-modal *ngIf="displayed">
+  <sand-modal *ngIf="displayed" color="info">
     <div title>
       Titre
     </div>
@@ -104,11 +192,14 @@
       <sand-button>Valider</sand-button>
     </div>
   </sand-modal>
-
-  <button (click)="openModal()">Open Modal</button>
+  <sand-button (click)="openModal()" class="info">Open Modal</sand-button>
 
   <h2>Table</h2>
   <sand-table [headers]="headers" [data]="datadatatable" (clickLineEvent)="getLineClicked($event)"></sand-table>
+  <sand-table [headers]="headers" [data]="datadatatable" (clickLineEvent)="getLineClicked($event)" color="primary"></sand-table>
+  <sand-table [headers]="headers" [data]="datadatatable" (clickLineEvent)="getLineClicked($event)" color="secondary"></sand-table>
+  <sand-table [headers]="headers" [data]="datadatatable" (clickLineEvent)="getLineClicked($event)" color="error"></sand-table>
+  <sand-table [headers]="headers" [data]="datadatatable" (clickLineEvent)="getLineClicked($event)" color="warning"></sand-table>
 
   <h2>Input</h2>
   <sand-input label="Votre nom" type="text" [formValue]="hours"></sand-input>
