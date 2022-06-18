@@ -19,5 +19,4 @@ export class NavbarComponent implements OnInit {
   handleMenu($event: boolean) {
     this.open = $event;
   }
-
 }

@@ -27,6 +27,7 @@ $bg-color: (
   'grey3': map-get($color, 'grey3'),
   'default': map-get($color, 'default'),
   'default-white': map-get($color, 'default-white'),
+  'header': #171717
 );
 
 $text-color: (
