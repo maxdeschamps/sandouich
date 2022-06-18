@@ -4,18 +4,18 @@
     list-style: none;
 
     a {
-        color: white;
+        color: map-get($text-color, 'default-white');
         font-weight: bold;
         text-decoration: none;
 
         &.current {
-            color: cornflowerblue;
+            color: map-get($text-color, 'info');
             position: relative;
             &::after {
                 content: '';
                 position: absolute;
                 bottom: -6px;
-                background: cornflowerblue;
+                background: map-get($bg-color, 'info');
                 height: 2px;
                 transition: .3s ease;
                 display: block;
