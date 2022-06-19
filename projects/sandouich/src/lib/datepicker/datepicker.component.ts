@@ -36,7 +36,6 @@ export class DatepickerComponent implements OnInit {
   @Output() datepickerValueChange = new EventEmitter<any>();
 
   onSelect (selectedDate: any) {
-    console.log(selectedDate);
     let date = this.datePipe.transform(new Date(selectedDate.date), 'yyyy-MM-dd HH:mm');
     this.datepickerValueChange.emit(date);
   }
