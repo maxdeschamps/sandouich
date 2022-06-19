@@ -157,6 +157,10 @@ export class GalleryComponent implements OnInit {
     this.modalService.enable();
   }
 
+  getDatepickerValue(date :any){
+    console.log(date);
+  }
+
   getClickButton(event :number|string){
     console.log(event);
   }

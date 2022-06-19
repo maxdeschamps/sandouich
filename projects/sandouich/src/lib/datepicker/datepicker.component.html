@@ -1,4 +1,4 @@
 <div class="lib-sandouich-input">
     <label>{{label}}</label>
-    <dp-date-picker [(ngModel)]="date" [mode]="mode" theme="dp-material" [config]="datePickerConfig"></dp-date-picker>
+    <dp-date-picker [(ngModel)]="date" [mode]="mode" theme="dp-material" [config]="datePickerConfig" (onSelect)="onSelect($event)"></dp-date-picker>
 </div>

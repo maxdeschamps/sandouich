@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 import { IDatePickerConfig } from "ng2-date-picker";
+import { DatePipe } from "@angular/common";
 import * as dayjs from 'dayjs';
 import 'dayjs/locale/fr';
 
@@ -11,7 +12,8 @@ dayjs.locale('fr');
   styleUrls: [
     './datepicker.component.scss'
   ],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers: [DatePipe]
 })
 export class DatepickerComponent implements OnInit {
   date = new Date();
@@ -23,12 +25,19 @@ export class DatepickerComponent implements OnInit {
     monthFormat: "MMMM, YYYY",
     firstDayOfWeek: "mo",
     showTwentyFourHours: true,
-    disableKeypress: true
+    disableKeypress: true,
   };
 
-  constructor() { }
+  constructor(private readonly datePipe: DatePipe) { }
 
   ngOnInit(): void {
   }
 
+  @Output() datepickerValueChange = new EventEmitter<any>();
+
+  onSelect (selectedDate: any) {
+    console.log(selectedDate);
+    let date = this.datePipe.transform(new Date(selectedDate.date), 'yyyy-MM-dd HH:mm');
+    this.datepickerValueChange.emit(date);
+  }
 }
