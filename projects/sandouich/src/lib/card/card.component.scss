@@ -6,11 +6,11 @@
   box-shadow: 0.125rem 0.125rem 0.25rem map-get($color, 'grey2');
   background: map-get($bg-color, grey3);
 
-  &:first-child {
+  > div:first-child {
     border-radius: 1rem 1rem 0 0;
   }
 
-  &:last-child {
+  > div:last-child {
     border-radius: 0 0 1rem 1rem;
   }
 

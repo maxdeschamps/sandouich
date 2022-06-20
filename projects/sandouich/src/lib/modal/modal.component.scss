@@ -11,11 +11,11 @@
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   z-index: 9999;
 
-  &:first-child {
+  > div:first-child {
     border-radius: 1rem 1rem 0 0;
   }
 
-  &:last-child {
+  > div:last-child {
     border-radius: 0 0 1rem 1rem;
   }
 
