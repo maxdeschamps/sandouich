@@ -3,9 +3,16 @@
 .lib-sandouich-card {
   width: 100%;
   border-radius: 1rem;
-  overflow: hidden;
   box-shadow: 0.125rem 0.125rem 0.25rem map-get($color, 'grey2');
   background: map-get($bg-color, grey3);
+
+  &:first-child {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 1rem 1rem;
+  }
 
   .lib-sandouich-card-header {
     padding: 1.5rem 1.8rem;
@@ -37,11 +44,11 @@
     .lib-sandouich-card-header {
       background-color: map-get($bg-color, 'success');
     }
-  
+
     .lib-sandouich-card-body {
       background-color: lighten(map-get($bg-color, 'success'), 62%);
     }
-  
+
     .lib-sandouich-card-footer {
       background-color: lighten(map-get($bg-color, 'success'), 52%);
     }
@@ -51,11 +58,11 @@
     .lib-sandouich-card-header {
       background-color: map-get($bg-color, 'info');
     }
-  
+
     .lib-sandouich-card-body {
       background-color: lighten(map-get($bg-color, 'info'), 46%);
     }
-  
+
     .lib-sandouich-card-footer {
       background-color: lighten(map-get($bg-color, 'info'), 36%);
     }
@@ -65,11 +72,11 @@
     .lib-sandouich-card-header {
       background-color: map-get($bg-color, 'warning');
     }
-  
+
     .lib-sandouich-card-body {
       background-color: lighten(map-get($bg-color, 'warning'), 50%);
     }
-  
+
     .lib-sandouich-card-footer {
       background-color: lighten(map-get($bg-color, 'warning'), 36%);
     }
@@ -79,11 +86,11 @@
     .lib-sandouich-card-header {
       background-color: map-get($bg-color, 'error');
     }
-  
+
     .lib-sandouich-card-body {
       background-color: lighten(map-get($bg-color, 'error'), 46%);
     }
-  
+
     .lib-sandouich-card-footer {
       background-color: lighten(map-get($bg-color, 'error'), 36%);
     }
