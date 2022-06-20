@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import {TabItemComponent} from "../tab-item/tab-item.component";
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { TabItemComponent } from "../tab-item/tab-item.component";
 
 @Component({
   selector: 'sand-tab-group',
@@ -15,11 +15,14 @@ export class TabGroupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Output() changeTab = new EventEmitter();
+
   selectTab(tab: TabItemComponent) {
     this.tabs.forEach((tab) => {
       tab.active = false;
     });
     tab.active = true;
+    this.changeTab.emit();
   }
 
   addTab(tab: TabItemComponent) {
