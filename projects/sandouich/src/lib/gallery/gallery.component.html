@@ -45,7 +45,7 @@
   <sand-button class="error" [secondary]="true" [round]="true">Error</sand-button>
   <sand-button class="wrong" [secondary]="true" [round]="true">Wrong</sand-button>
   <sand-button [secondary]="true" [round]="true">Rien</sand-button>
-  
+
   <sand-button class="info" id="5" (clickButtonEvent)="getClickButton($event)">event id: 5</sand-button>
   <sand-button class="info" id="test" (clickButtonEvent)="getClickButton($event)">event id: test</sand-button>
 
@@ -207,6 +207,7 @@
 
   <h2>Input</h2>
   <sand-input label="Votre nom" type="text" [formValue]="hours"></sand-input>
+  <sand-input label="Votre âge" type="number" [formValue]="hours" [min]="0" [max]="122"></sand-input>
 
   <h2>Select</h2>
   <sand-select [formValue]="selectedProject" [arrayItems]="projects"></sand-select>

@@ -16,6 +16,9 @@ export class InputComponent implements OnInit {
 
   @Output() valueChange = new EventEmitter();
 
+  @Input() min?:number;
+  @Input() max?:number;
+
 
 
   constructor() { }
